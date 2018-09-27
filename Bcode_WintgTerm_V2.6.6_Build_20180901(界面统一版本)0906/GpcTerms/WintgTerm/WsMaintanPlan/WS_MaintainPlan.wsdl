@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/ds_MaintainPlan_Index_List.xsd" />
+      <s:import namespace="http://tempuri.org/ds_MaintainPlan_Index.xsd" />
+      <s:import schemaLocation="http://192.100.99.35/WS_MaintainPlan.asmx?schema=ds_MaintainPlan_Index" namespace="http://tempuri.org/ds_MaintainPlan_Index.xsd" />
+      <s:import schemaLocation="http://192.100.99.35/WS_MaintainPlan.asmx?schema=ds_MaintainPlan_Index_List" namespace="http://tempuri.org/ds_MaintainPlan_Index_List.xsd" />
+      <s:element name="IsReady">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsReadyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsReadyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_maintainIndex_List_by_TimeRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="time1" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="time2" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_maintainIndex_List_by_TimeRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_maintainIndex_List_by_TimeRangeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_MaintainPlan_Index_List.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_maintainIndex_List_by_PlanID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PlanID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_maintainIndex_List_by_PlanIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_maintainIndex_List_by_PlanIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_MaintainPlan_Index_List.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_MaintainIndex_By_ID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_MaintainIndex_By_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_MaintainIndex_By_IDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_MaintainPlan_Index.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete_MaintainIndex_BeforeTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="time1" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete_MaintainIndex_BeforeTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Delete_MaintainIndex_BeforeTimeResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Result">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="succeed" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Delete_MaintainIndex_By_ID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete_MaintainIndex_By_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Delete_MaintainIndex_By_IDResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_MaintainIndex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_MaintainIndexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_MaintainIndexResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="IsReadySoapIn">
+    <part name="parameters" element="s0:IsReady" />
+  </message>
+  <message name="IsReadySoapOut">
+    <part name="parameters" element="s0:IsReadyResponse" />
+  </message>
+  <message name="Get_maintainIndex_List_by_TimeRangeSoapIn">
+    <part name="parameters" element="s0:Get_maintainIndex_List_by_TimeRange" />
+  </message>
+  <message name="Get_maintainIndex_List_by_TimeRangeSoapOut">
+    <part name="parameters" element="s0:Get_maintainIndex_List_by_TimeRangeResponse" />
+  </message>
+  <message name="Get_maintainIndex_List_by_PlanIDSoapIn">
+    <part name="parameters" element="s0:Get_maintainIndex_List_by_PlanID" />
+  </message>
+  <message name="Get_maintainIndex_List_by_PlanIDSoapOut">
+    <part name="parameters" element="s0:Get_maintainIndex_List_by_PlanIDResponse" />
+  </message>
+  <message name="Get_MaintainIndex_By_IDSoapIn">
+    <part name="parameters" element="s0:Get_MaintainIndex_By_ID" />
+  </message>
+  <message name="Get_MaintainIndex_By_IDSoapOut">
+    <part name="parameters" element="s0:Get_MaintainIndex_By_IDResponse" />
+  </message>
+  <message name="Delete_MaintainIndex_BeforeTimeSoapIn">
+    <part name="parameters" element="s0:Delete_MaintainIndex_BeforeTime" />
+  </message>
+  <message name="Delete_MaintainIndex_BeforeTimeSoapOut">
+    <part name="parameters" element="s0:Delete_MaintainIndex_BeforeTimeResponse" />
+  </message>
+  <message name="Delete_MaintainIndex_By_IDSoapIn">
+    <part name="parameters" element="s0:Delete_MaintainIndex_By_ID" />
+  </message>
+  <message name="Delete_MaintainIndex_By_IDSoapOut">
+    <part name="parameters" element="s0:Delete_MaintainIndex_By_IDResponse" />
+  </message>
+  <message name="Update_MaintainIndexSoapIn">
+    <part name="parameters" element="s0:Update_MaintainIndex" />
+  </message>
+  <message name="Update_MaintainIndexSoapOut">
+    <part name="parameters" element="s0:Update_MaintainIndexResponse" />
+  </message>
+  <portType name="WS_MaintainPlanSoap">
+    <operation name="IsReady">
+      <input message="s0:IsReadySoapIn" />
+      <output message="s0:IsReadySoapOut" />
+    </operation>
+    <operation name="Get_maintainIndex_List_by_TimeRange">
+      <input message="s0:Get_maintainIndex_List_by_TimeRangeSoapIn" />
+      <output message="s0:Get_maintainIndex_List_by_TimeRangeSoapOut" />
+    </operation>
+    <operation name="Get_maintainIndex_List_by_PlanID">
+      <input message="s0:Get_maintainIndex_List_by_PlanIDSoapIn" />
+      <output message="s0:Get_maintainIndex_List_by_PlanIDSoapOut" />
+    </operation>
+    <operation name="Get_MaintainIndex_By_ID">
+      <input message="s0:Get_MaintainIndex_By_IDSoapIn" />
+      <output message="s0:Get_MaintainIndex_By_IDSoapOut" />
+    </operation>
+    <operation name="Delete_MaintainIndex_BeforeTime">
+      <input message="s0:Delete_MaintainIndex_BeforeTimeSoapIn" />
+      <output message="s0:Delete_MaintainIndex_BeforeTimeSoapOut" />
+    </operation>
+    <operation name="Delete_MaintainIndex_By_ID">
+      <input message="s0:Delete_MaintainIndex_By_IDSoapIn" />
+      <output message="s0:Delete_MaintainIndex_By_IDSoapOut" />
+    </operation>
+    <operation name="Update_MaintainIndex">
+      <input message="s0:Update_MaintainIndexSoapIn" />
+      <output message="s0:Update_MaintainIndexSoapOut" />
+    </operation>
+  </portType>
+  <binding name="WS_MaintainPlanSoap" type="s0:WS_MaintainPlanSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="IsReady">
+      <soap:operation soapAction="http://tempuri.org/IsReady" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_maintainIndex_List_by_TimeRange">
+      <soap:operation soapAction="http://tempuri.org/Get_maintainIndex_List_by_TimeRange" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_maintainIndex_List_by_PlanID">
+      <soap:operation soapAction="http://tempuri.org/Get_maintainIndex_List_by_PlanID" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_MaintainIndex_By_ID">
+      <soap:operation soapAction="http://tempuri.org/Get_MaintainIndex_By_ID" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Delete_MaintainIndex_BeforeTime">
+      <soap:operation soapAction="http://tempuri.org/Delete_MaintainIndex_BeforeTime" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Delete_MaintainIndex_By_ID">
+      <soap:operation soapAction="http://tempuri.org/Delete_MaintainIndex_By_ID" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Update_MaintainIndex">
+      <soap:operation soapAction="http://tempuri.org/Update_MaintainIndex" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="WS_MaintainPlanSoap12" type="s0:WS_MaintainPlanSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="IsReady">
+      <soap12:operation soapAction="http://tempuri.org/IsReady" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_maintainIndex_List_by_TimeRange">
+      <soap12:operation soapAction="http://tempuri.org/Get_maintainIndex_List_by_TimeRange" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_maintainIndex_List_by_PlanID">
+      <soap12:operation soapAction="http://tempuri.org/Get_maintainIndex_List_by_PlanID" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_MaintainIndex_By_ID">
+      <soap12:operation soapAction="http://tempuri.org/Get_MaintainIndex_By_ID" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Delete_MaintainIndex_BeforeTime">
+      <soap12:operation soapAction="http://tempuri.org/Delete_MaintainIndex_BeforeTime" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Delete_MaintainIndex_By_ID">
+      <soap12:operation soapAction="http://tempuri.org/Delete_MaintainIndex_By_ID" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Update_MaintainIndex">
+      <soap12:operation soapAction="http://tempuri.org/Update_MaintainIndex" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_MaintainPlan">
+    <port name="WS_MaintainPlanSoap" binding="s0:WS_MaintainPlanSoap">
+      <soap:address location="http://192.100.99.35/WS_MaintainPlan.asmx" />
+    </port>
+    <port name="WS_MaintainPlanSoap12" binding="s0:WS_MaintainPlanSoap12">
+      <soap12:address location="http://192.100.99.35/WS_MaintainPlan.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </port>
+  </service>
+</definitions>

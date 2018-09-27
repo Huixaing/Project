@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[Wintg.dsp]
+SCC_Aux_Path = "D:\gpc_lz\VSS"
+SCC_Project_Name = "$/gpc_lz/WINTG", CAAAAAAA
+
+[wintg.mak]
+SCC_Aux_Path = "D:\gpc_lz\VSS"
+SCC_Project_Name = "$/gpc_lz/WINTG", CAAAAAAA

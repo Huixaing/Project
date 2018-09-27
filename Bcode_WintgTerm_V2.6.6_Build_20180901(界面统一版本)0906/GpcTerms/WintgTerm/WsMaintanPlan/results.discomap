@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.100.99.35/WS_MaintainPlan.asmx?schema=ds_MaintainPlan_Index" filename="ds_MaintainPlan_Index.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://192.100.99.35/WS_MaintainPlan.asmx?wsdl" filename="WS_MaintainPlan.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://192.100.99.35/WS_MaintainPlan.asmx?disco" filename="WS_MaintainPlan.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.100.99.35/WS_MaintainPlan.asmx?schema=ds_MaintainPlan_Index_List" filename="ds_MaintainPlan_Index_List.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

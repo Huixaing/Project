@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.100.88.226:1111/ws_dcmd.asmx?schema=ds_dcmd_index" filename="ds_dcmd_index.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://192.100.88.226:1111/ws_dcmd.asmx?disco" filename="ws_dcmd.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://192.100.88.226:1111/ws_dcmd.asmx?wsdl" filename="ws_dcmd.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.100.88.226:1111/ws_dcmd.asmx?schema=ds_Dcmd_Number" filename="ds_Dcmd_Number.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.100.88.226:1111/ws_dcmd.asmx?schema=ds_dcmd_template" filename="ds_dcmd_template.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.100.88.226:1111/ws_dcmd.asmx?schema=ds_DCMD_SignRecord" filename="ds_DCMD_SignRecord.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://192.100.88.226:1111/ws_dcmd.asmx?schema=ds_dcmd" filename="ds_dcmd.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

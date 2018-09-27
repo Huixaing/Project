@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/ds_dcmd.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/ds_dcmd.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/ds_dcmd.xsd" id="ds_dcmd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="ds_dcmd">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DCMD_RECV_LIST">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RECEIVERLIST_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DCMD_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RECEIVER_ID" type="xs:int" />
+              <xs:element minOccurs="0" name="RECEIVER_UNIT_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RECEIVER_TYPE" type="xs:int" />
+              <xs:element minOccurs="0" name="COPY_TO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SIGNER_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SIGN_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SIGN_STATUS" type="xs:int" />
+              <xs:element minOccurs="0" name="IS_SELECT" type="xs:short" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DCMD_TCC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DCMD_TCC_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DCMD_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TCC_CONTENT" type="xs:base64Binary" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DCMD_WIRELESS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WIRELESS_CMDID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DCMD_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TRAIN_NO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LOCOMOTIVE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TURN_STATION_ID" type="xs:int" />
+              <xs:element minOccurs="0" name="TURN_STATION_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SIGN_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SIGN_STATUS" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DCMD_WIRELESS_BROADCAST">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BROADCAST_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DCMD_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="GEN_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PLAN_START_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="PLAN_END_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="STATION_ENTITY" type="xs:decimal" />
+              <xs:element minOccurs="0" name="STATION_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DIRECTION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="STATUS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TRAIN_TYPE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="REAL_START_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="REAL_END_TIME" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DCMD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DCMD_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DCMD_STYLE_TITLE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DCMD_NUM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ORG_CMD_NUM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CREATE_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CREATER_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SEND_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EDIT_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SENDER_TYPE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SENDER_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SENDER_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SENDER_UNIT_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="REREADER_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DUTYCHIEF_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AUTHOR_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="RECVER">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="WIRELESS_CMD_TYPE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CMD_DEST" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CMD_OPER" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SEND_WAY" type="xs:decimal" />
+              <xs:element minOccurs="0" name="STATUS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CONTENT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SEND_ENTITY" type="xs:decimal" />
+              <xs:element minOccurs="0" name="AUTHOR_STATUS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NEED_AUTHOR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TCC_LEN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="JHH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:DCMD_RECV_LIST" />
+      <xs:field xpath="mstns:RECEIVERLIST_ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DCMD_TCC_Constraint1">
+      <xs:selector xpath=".//mstns:DCMD_TCC" />
+      <xs:field xpath="mstns:DCMD_TCC_ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DCMD_WIRELESS_Constraint1">
+      <xs:selector xpath=".//mstns:DCMD_WIRELESS" />
+      <xs:field xpath="mstns:WIRELESS_CMDID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DCMD_WIRELESS_BROADCAST_Constraint1">
+      <xs:selector xpath=".//mstns:DCMD_WIRELESS_BROADCAST" />
+      <xs:field xpath="mstns:BROADCAST_ID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DCMD_Constraint1">
+      <xs:selector xpath=".//mstns:DCMD" />
+      <xs:field xpath="mstns:DCMD_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

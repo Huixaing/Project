@@ -1,0 +1,365 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Wintg.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TCC_COMMAND_INPUT DIALOGEX 0, 0, 353, 365
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "限速命令输入"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_TCC_CMD_TYPE,55,5,63,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_TCC_CMDID,54,22,62,14,ES_AUTOHSCROLL | WS_DISABLED
+    COMBOBOX        IDC_TCC_CMD_STA,36,41,78,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TCC_CMD_STA2,36,55,78,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TCC_CMD_ABSLINE,36,69,78,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_TCC_CMD_KM,50,86,25,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TCC_CMD_M,121,86,21,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TCC_CMD_KM2,50,102,25,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TCC_CMD_M2,121,102,21,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_TCC_CMD_LIMITVAL,223,38,51,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_TCC_CMD_TRAINID,282,38,48,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,274,143,50,21
+    PUSHBUTTON      "取消",IDCANCEL,274,175,50,21
+    CONTROL         "开始时间",IDC_TCC_CMD_TIMEBEGIN_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP,16,136,48,10
+    CONTROL         "",IDC_TCC_CMD_TIMEBEGIN,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,28,146,85,12
+    CONTROL         "立即执行",IDC_TCC_CMD_TIMEBEGIN_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,16,161,48,10
+    CONTROL         "结束时间",IDC_TCC_CMD_TIMEEND_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED | WS_GROUP,159,135,48,
+                    10
+    CONTROL         "",IDC_TCC_CMD_TIMEEND,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,171,146,87,12
+    CONTROL         "持久有效",IDC_TCC_CMD_TIMEEND_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,159,160,48,10
+    CONTROL         "第二趟",IDC_TCC_LIMIT2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,184,54,40,10
+    COMBOBOX        IDC_TCC_CMD_LIMITVAL2,223,52,51,141,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_TCC_CMD_TRAINID2,282,52,48,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CONTROL         "第三趟",IDC_TCC_LIMIT3,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,184,69,40,10
+    COMBOBOX        IDC_TCC_CMD_LIMITVAL3,223,67,51,141,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_TCC_CMD_TRAINID3,282,66,48,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CONTROL         "第四趟",IDC_TCC_LIMIT4,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,184,83,40,10
+    COMBOBOX        IDC_TCC_CMD_LIMITVAL4,223,82,51,141,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_TCC_CMD_TRAINID4,282,81,48,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CONTROL         "第五趟",IDC_TCC_LIMIT5,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,184,98,40,10
+    COMBOBOX        IDC_TCC_CMD_LIMITVAL5,223,96,51,141,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_TCC_CMD_TRAINID5,282,95,48,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "限速命令号",IDC_STATIC,9,25,41,8
+    LTEXT           "开始站",IDC_STATIC,8,44,25,8
+    LTEXT           "结束站",IDC_STATIC,8,58,25,8
+    LTEXT           "线路",IDC_STATIC,9,72,17,8
+    LTEXT           "起始公里标",IDC_STATIC,8,86,41,8
+    LTEXT           "结束公里标",IDC_STATIC,8,104,41,8
+    LTEXT           "第一趟",IDC_STATIC,196,40,25,8
+    GROUPBOX        "开始时间",IDC_STATIC,11,124,105,48
+    GROUPBOX        "结束时间",IDC_STATIC,156,124,105,48
+    LTEXT           "Km+",IDC_STATIC,105,86,16,8
+    LTEXT           "m",IDC_STATIC,174,86,8,8
+    LTEXT           "Km+",IDC_STATIC,105,102,16,8
+    LTEXT           "m",IDC_STATIC,174,102,8,8
+    GROUPBOX        "",IDC_TCC_LIST,11,173,250,84
+    LTEXT           "命令类型",IDC_STATIC,11,8,33,8
+    EDITTEXT        IDC_TCC_CMD_NOTE,11,264,249,99,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_VSCROLL | NOT WS_TABSTOP
+    CONTROL         "取消限速",IDC_TCC_CANCE_LIMIT,"Button",BS_AUTOCHECKBOX,
+                    198,8,48,10
+    LTEXT           "车次号",IDC_STATIC,289,27,25,8
+    LTEXT           "限速值Km/h",IDC_STATIC,227,27,41,8
+    CONTROL         "最后恢复常速",IDC_TCC_CANCELCOMMAND,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,253,8,64,
+                    10
+    COMBOBOX        IDC_TCC_CMD_LONGKM,76,86,27,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TCC_CMD_LONGKM2,76,102,27,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TCC_CMD_LONGM,143,86,27,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TCC_CMD_LONGM2,143,102,27,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "修改命令号",IDC_CHANGE_TCCCMDID,125,23,45,14
+    PUSHBUTTON      "自动选号",IDC_AUTOCOMPUTE_TCCCMDID,125,36,45,14
+END
+
+IDD_TCC_CONFIRM_COMMAND DIALOGEX 0, 0, 508, 343
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "删除",IDC_TCC_DELCMD_BTN,454,294,50,23
+    GROUPBOX        "",IDC_TCC_CMD_LIST,0,0,508,230
+    EDITTEXT        IDC_TCC_CMD_NOTE,2,233,330,102,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_VSCROLL
+    PUSHBUTTON      "人工刷新",IDC_TCC_REFRESH,339,294,50,22
+    PUSHBUTTON      "发送",IDC_TCC_SENDCMD_BTN,397,294,50,22
+    EDITTEXT        IDC_TCC_CMD_STATUS,336,235,168,45,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_VSCROLL
+END
+
+IDD_TCC_LOCALCMD_MGR DIALOGEX 0, 0, 508, 338
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "删除",IDC_TCC_DELCMD_BTN,439,281,50,21
+    GROUPBOX        "",IDC_TCC_CMD_LIST,0,0,508,230
+    EDITTEXT        IDC_TCC_CMD_NOTE,6,232,410,104,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_VSCROLL
+    PUSHBUTTON      "人工刷新",IDC_TCC_REFRESH,439,248,50,22
+END
+
+IDD_TCC_LIRC_CMD_TABLE DIALOGEX 0, 0, 508, 388
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_TCC_CMD_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,0,0,508,146
+    PUSHBUTTON      "生成取消调令",IDC_TCC_CANCELCMD_BTN,439,281,55,22
+    PUSHBUTTON      "人工刷新",IDC_TCC_REFRESH,439,248,55,22
+    GROUPBOX        "",IDC_TCC_STATUS_LIST,0,229,417,157
+    GROUPBOX        "",IDC_TCC_LINE_STATUS_GRID,1,149,415,80
+END
+
+IDD_TCC DIALOGEX 0, 0, 511, 383
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "列控中心限速命令管理"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "关闭",IDCANCEL,439,9,50,21
+    CONTROL         "",IDC_TAB1,"SysTabControl32",0x0,0,38,511,344
+    COMBOBOX        IDC_TCC_LIST,29,15,100,180,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "刷新",IDC_TCC_REFRESH,138,10,50,21,NOT WS_VISIBLE
+    LTEXT           "车站",IDC_STATIC,5,17,17,8
+END
+
+IDD_TCC_LIMITSPEED_CONFIRM DIALOGEX 0, 0, 371, 194
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "限速命令确认"
+FONT 8, "Microsoft Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "校验",IDOK,313,41,50,23
+    PUSHBUTTON      "    取消\n限速命令",IDCANCEL,313,7,50,27,BS_MULTILINE
+    EDITTEXT        IDC_TCC_CMDID,62,88,62,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_TCC_CMD_TRAINID,179,88,62,14,ES_AUTOHSCROLL | 
+                    ES_WANTRETURN
+    COMBOBOX        IDC_TCC_CMD_STA,62,104,63,141,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TCC_CMD_STA2,179,104,62,141,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TCC_CMD_ABSLINE,288,105,78,141,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_TCC_CMD_KM,62,121,25,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TCC_CMD_M,104,122,21,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TCC_CMD_KM2,178,121,25,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TCC_CMD_M2,221,122,21,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_TCC_CMD_LIMITVAL,288,123,77,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "定时开始",IDC_TCC_CMD_TIMEBEGIN_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,23,150,48,10
+    CONTROL         "",IDC_TCC_CMD_TIMEBEGIN,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,35,161,85,13
+    CONTROL         "立即执行",IDC_TCC_CMD_TIMEBEGIN_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,23,178,48,10
+    CONTROL         "定时结束",IDC_TCC_CMD_TIMEEND_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,141,150,48,10
+    CONTROL         "",IDC_TCC_CMD_TIMEEND,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,153,162,87,14
+    CONTROL         "持久有效",IDC_TCC_CMD_TIMEEND_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,141,178,48,10
+    LTEXT           "限速命令号",IDC_STATIC,20,91,41,8
+    LTEXT           "开始车站",IDC_STATIC,20,107,33,8
+    LTEXT           "限速车次号",IDC_STATIC,138,92,41,8
+    LTEXT           "结束车站",IDC_STATIC,138,107,33,8
+    LTEXT           "线路",IDC_STATIC,260,108,17,8
+    LTEXT           "开始公里标",IDC_STATIC,19,123,41,8
+    LTEXT           "结束公里标",IDC_STATIC,137,124,41,8
+    LTEXT           "限速值",IDC_STATIC,260,125,25,8
+    GROUPBOX        "开始时间",IDC_STATIC,18,138,105,51
+    GROUPBOX        "结束时间",IDC_STATIC,138,138,105,51
+    LTEXT           "Km+",IDC_STATIC,88,124,16,8
+    LTEXT           "m",IDC_STATIC,126,125,8,8
+    LTEXT           "Km+",IDC_STATIC,207,123,16,8
+    LTEXT           "m",IDC_STATIC,244,124,8,8
+    GROUPBOX        "限速内容",IDC_STATIC,4,76,366,116
+    EDITTEXT        IDC_TCC_TEXT,4,3,301,65,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "    刷新\n车站列表",IDC_TCC_REFRESH_STATIONLIST,289,152,
+                    50,27,BS_MULTILINE | WS_DISABLED
+END
+
+IDD_TCC_HISTORY_COMMAND DIALOGEX 0, 0, 508, 338
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_TCC_CMD_LIST,0,0,508,230
+    EDITTEXT        IDC_TCC_CMD_NOTE,6,232,373,97,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_VSCROLL
+    PUSHBUTTON      "查询",IDC_TCC_REFRESH,416,313,50,22
+    CONTROL         "",IDC_TCC_CMD_TIMEBEGIN,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,408,244,80,12
+    CONTROL         "",IDC_TCC_CMD_TIMEEND,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,407,286,80,12
+    CONTROL         "",IDC_TCC_CMD_TIMEBEGIN_RADIO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,392,245,10,10
+    CONTROL         "不指定",IDC_TCC_CMD_TIMEBEGIN_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,392,258,40,10
+    CONTROL         "",IDC_TCC_CMD_TIMEEND_RADIO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,392,287,10,8
+    CONTROL         "不指定",IDC_TCC_CMD_TIMEEND_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,392,299,40,10
+    GROUPBOX        "起始时间",IDC_STATIC,387,234,105,35
+    GROUPBOX        "结束时间",IDC_STATIC,386,275,106,35
+END
+
+IDD_PASSWORD DIALOGEX 0, 0, 166, 82
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "请输入密码"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,29,14,108,18,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,22,52,50,14
+    PUSHBUTTON      "取消",IDCANCEL,90,52,50,14
+END
+
+IDD_CMD_TYPE_SELECT DIALOGEX 0, 0, 156, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "限速命令类型选择"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "建立正常\n限速命令",IDOK,22,20,50,27,BS_MULTILINE
+    PUSHBUTTON      "建立取消\n限速命令",IDCANCEL,90,21,50,25,BS_MULTILINE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_TCC_CONFIRM_COMMAND, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 342
+    END
+
+    IDD_TCC_LIRC_CMD_TABLE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 386
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Wintg.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

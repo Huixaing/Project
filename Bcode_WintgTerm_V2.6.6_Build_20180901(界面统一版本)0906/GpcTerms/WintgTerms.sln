@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WintgTerm", "WintgTerm\WintgTerm.vcproj", "{9FAB7525-856F-4F1E-9DE6-FAC8D401A630}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PropTree", "PropTable\PropTree.vcproj", "{45D90D84-5266-4A31-AA78-41258FB52123}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TG", "..\TG\TG.vcproj", "{4A421153-3E11-4AAA-9F5A-7BFC537F0D57}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9FAB7525-856F-4F1E-9DE6-FAC8D401A630}.Debug.ActiveCfg = Debug|Win32
+		{9FAB7525-856F-4F1E-9DE6-FAC8D401A630}.Debug.Build.0 = Debug|Win32
+		{9FAB7525-856F-4F1E-9DE6-FAC8D401A630}.Release.ActiveCfg = Release|Win32
+		{9FAB7525-856F-4F1E-9DE6-FAC8D401A630}.Release.Build.0 = Release|Win32
+		{45D90D84-5266-4A31-AA78-41258FB52123}.Debug.ActiveCfg = Debug|Win32
+		{45D90D84-5266-4A31-AA78-41258FB52123}.Debug.Build.0 = Debug|Win32
+		{45D90D84-5266-4A31-AA78-41258FB52123}.Release.ActiveCfg = Release|Win32
+		{45D90D84-5266-4A31-AA78-41258FB52123}.Release.Build.0 = Release|Win32
+		{4A421153-3E11-4AAA-9F5A-7BFC537F0D57}.Debug.ActiveCfg = Debug|Win32
+		{4A421153-3E11-4AAA-9F5A-7BFC537F0D57}.Debug.Build.0 = Debug|Win32
+		{4A421153-3E11-4AAA-9F5A-7BFC537F0D57}.Release.ActiveCfg = Release|Win32
+		{4A421153-3E11-4AAA-9F5A-7BFC537F0D57}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

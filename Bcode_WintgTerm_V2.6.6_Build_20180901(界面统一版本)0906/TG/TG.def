@@ -1,0 +1,9 @@
+; TG.def : 定义模块参数。
+
+LIBRARY      "TG.OCX"
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/ds_dcmd_index.xsd" />
+      <s:import schemaLocation="http://192.100.99.35/ws_dcmd.asmx?schema=ds_dcmd_index" namespace="http://tempuri.org/ds_dcmd_index.xsd" />
+      <s:element name="Hello">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsReady">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsReadyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsReadyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_dcmd_index_by_Condition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Condition" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_dcmd_index_by_ConditionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_dcmd_index_by_ConditionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_dcmd_index.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Dcmd_By_XML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Dcmd_By_XMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_Dcmd_By_XMLResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Result">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="succeed" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="HelloSoapIn">
+    <part name="parameters" element="s0:Hello" />
+  </message>
+  <message name="HelloSoapOut">
+    <part name="parameters" element="s0:HelloResponse" />
+  </message>
+  <message name="IsReadySoapIn">
+    <part name="parameters" element="s0:IsReady" />
+  </message>
+  <message name="IsReadySoapOut">
+    <part name="parameters" element="s0:IsReadyResponse" />
+  </message>
+  <message name="Get_dcmd_index_by_ConditionSoapIn">
+    <part name="parameters" element="s0:Get_dcmd_index_by_Condition" />
+  </message>
+  <message name="Get_dcmd_index_by_ConditionSoapOut">
+    <part name="parameters" element="s0:Get_dcmd_index_by_ConditionResponse" />
+  </message>
+  <message name="Update_Dcmd_By_XMLSoapIn">
+    <part name="parameters" element="s0:Update_Dcmd_By_XML" />
+  </message>
+  <message name="Update_Dcmd_By_XMLSoapOut">
+    <part name="parameters" element="s0:Update_Dcmd_By_XMLResponse" />
+  </message>
+  <portType name="WS_DCMDSoap">
+    <operation name="Hello">
+      <input message="s0:HelloSoapIn" />
+      <output message="s0:HelloSoapOut" />
+    </operation>
+    <operation name="IsReady">
+      <input message="s0:IsReadySoapIn" />
+      <output message="s0:IsReadySoapOut" />
+    </operation>
+    <operation name="Get_dcmd_index_by_Condition">
+      <input message="s0:Get_dcmd_index_by_ConditionSoapIn" />
+      <output message="s0:Get_dcmd_index_by_ConditionSoapOut" />
+    </operation>
+    <operation name="Update_Dcmd_By_XML">
+      <input message="s0:Update_Dcmd_By_XMLSoapIn" />
+      <output message="s0:Update_Dcmd_By_XMLSoapOut" />
+    </operation>
+  </portType>
+  <binding name="WS_DCMDSoap" type="s0:WS_DCMDSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Hello">
+      <soap:operation soapAction="http://tempuri.org/Hello" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IsReady">
+      <soap:operation soapAction="http://tempuri.org/IsReady" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_dcmd_index_by_Condition">
+      <soap:operation soapAction="http://tempuri.org/Get_dcmd_index_by_Condition" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Update_Dcmd_By_XML">
+      <soap:operation soapAction="http://tempuri.org/Update_Dcmd_By_XML" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="WS_DCMDSoap12" type="s0:WS_DCMDSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="Hello">
+      <soap12:operation soapAction="http://tempuri.org/Hello" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="IsReady">
+      <soap12:operation soapAction="http://tempuri.org/IsReady" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_dcmd_index_by_Condition">
+      <soap12:operation soapAction="http://tempuri.org/Get_dcmd_index_by_Condition" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Update_Dcmd_By_XML">
+      <soap12:operation soapAction="http://tempuri.org/Update_Dcmd_By_XML" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_DCMD">
+    <port name="WS_DCMDSoap" binding="s0:WS_DCMDSoap">
+      <soap:address location="http://192.100.99.35/ws_dcmd.asmx" />
+    </port>
+    <port name="WS_DCMDSoap12" binding="s0:WS_DCMDSoap12">
+      <soap12:address location="http://192.100.99.35/ws_dcmd.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,5 @@
+// Microsoft Visual C++ generated Help ID include file.
+// Used by Wintg.rc
+//
+#define HIDC_ADD                        0x82110899    // 866
+#define HIDC_SAVE                       0x821108a6    // 866

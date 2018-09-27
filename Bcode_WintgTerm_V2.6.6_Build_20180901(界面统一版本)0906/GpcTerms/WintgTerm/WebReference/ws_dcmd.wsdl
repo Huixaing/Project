@@ -1,0 +1,1231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/ds_dcmd_index.xsd" />
+      <s:import namespace="http://tempuri.org/ds_dcmd.xsd" />
+      <s:import namespace="http://tempuri.org/ds_dcmd_template.xsd" />
+      <s:import namespace="http://tempuri.org/ds_Dcmd_Number.xsd" />
+      <s:import namespace="http://tempuri.org/ds_DCMD_SignRecord.xsd" />
+      <s:import schemaLocation="http://192.100.88.226:1111/ws_dcmd.asmx?schema=ds_Dcmd_Number" namespace="http://tempuri.org/ds_Dcmd_Number.xsd" />
+      <s:import schemaLocation="http://192.100.88.226:1111/ws_dcmd.asmx?schema=ds_DCMD_SignRecord" namespace="http://tempuri.org/ds_DCMD_SignRecord.xsd" />
+      <s:import schemaLocation="http://192.100.88.226:1111/ws_dcmd.asmx?schema=ds_dcmd_index" namespace="http://tempuri.org/ds_dcmd_index.xsd" />
+      <s:import schemaLocation="http://192.100.88.226:1111/ws_dcmd.asmx?schema=ds_dcmd_template" namespace="http://tempuri.org/ds_dcmd_template.xsd" />
+      <s:import schemaLocation="http://192.100.88.226:1111/ws_dcmd.asmx?schema=ds_dcmd" namespace="http://tempuri.org/ds_dcmd.xsd" />
+      <s:element name="Hello">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Is_DB_Connected">
+        <s:complexType />
+      </s:element>
+      <s:element name="Is_DB_ConnectedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Is_DB_ConnectedResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Result">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="succeed" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_dcmd_index_by_Condition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Condition" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_dcmd_index_by_ConditionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_dcmd_index_by_ConditionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_dcmd_index.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_dcmd_By_dcmdid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dcmd_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_dcmd_By_dcmdidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_dcmd_By_dcmdidResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_dcmd.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Dcmd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_dcmd.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_DcmdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_DcmdResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Is_All_Signaled">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_dcmd.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Is_All_SignaledResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Is_All_SignaledResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Dcmd_and_DcmdNum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_dcmd.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="str_number" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="theSender_ID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cmd_Oper" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Dcmd_and_DcmdNumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_Dcmd_and_DcmdNumResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete_Dcmd_By_Dcmdid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dcmd_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete_Dcmd_By_DcmdidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Delete_Dcmd_By_DcmdidResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_dcmd_template_all">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_dcmd_template_allResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_dcmd_template_allResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_dcmd_template.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Dcmd_Template">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_dcmd_template.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Dcmd_TemplateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_Dcmd_TemplateResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IS_DcmdNumber_Validated">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="theNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IS_DcmdNumber_ValidatedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IS_DcmdNumber_ValidatedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Next_DCMD_Number">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Sender_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="command_Oper" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Next_DCMD_NumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Next_DCMD_NumberResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Reset_DcmdNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Sender_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cmd_Oper" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Reset_DcmdNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Reset_DcmdNumberResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Reset_DcmdNumber_By_DCMD_DATE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Sender_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="current_dcmd_date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Reset_DcmdNumber_By_DCMD_DATEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Reset_DcmdNumber_By_DCMD_DATEResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Dcmd_Number_Setting_All">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_Dcmd_Number_Setting_AllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Dcmd_Number_Setting_AllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_Dcmd_Number.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Dcmd_Number_Setting">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_Dcmd_Number.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Dcmd_Number_SettingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_Dcmd_Number_SettingResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Recv_Status">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="recv_info" type="s0:Recv_Dcmd_Xml_Info" />
+            <s:element minOccurs="1" maxOccurs="1" name="senderid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="is_dutychief" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Recv_Dcmd_Xml_Info">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Recv_Send_Entity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Recv_Creat_Time" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Train_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Locomotive" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Station_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Recv_Time" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Recv_entity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Recv_Status" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sign_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cmd_no" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="parse_succeed" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Update_Recv_StatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_Recv_StatusResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Signal_Status_Local">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sendentity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="creattime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="dcmdnum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="current_Setting" type="s0:DCMD_Setting" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DCMD_Setting">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Send_Entity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sender_Type" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sender_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Tcc_Version" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OPMS_Interface" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Console_DisplayName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dcmd_num_Start" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dcmd_num_End" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GSM_R_entity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BaseLevel_entity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TSR_entity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Recv_Station_List" type="s0:ArrayOfStation_Info" />
+          <s:element minOccurs="0" maxOccurs="1" name="Recv_Console_List" type="s0:ArrayOfConsole_Info" />
+          <s:element minOccurs="0" maxOccurs="1" name="Recv_DutyChief_List" type="s0:ArrayOfDutyChief_Info" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStation_Info">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Station_Info" nillable="true" type="s0:Station_Info" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Station_Info">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Station_EntityID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Station_DisplayName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Station_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Lirc_EntityID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfConsole_Info">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Console_Info" nillable="true" type="s0:Console_Info" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Console_Info">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Console_EntityID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Console_DisplayName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Console_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Console_GPCID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDutyChief_Info">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DutyChief_Info" nillable="true" type="s0:DutyChief_Info" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DutyChief_Info">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DutyChief_EntityID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DutyChief_DisplayName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DutyChief_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DutyChief_GPCID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Update_Signal_Status_LocalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_Signal_Status_LocalResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_DCMD_ID_By_recv_info">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="recv_info" type="s0:Recv_Dcmd_Xml_Info" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_DCMD_ID_By_recv_infoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_DCMD_ID_By_recv_infoResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_DCMD_ID_By_recv_info2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sendentity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="creattime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="dcmdnum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="senderid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_DCMD_ID_By_recv_info2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_DCMD_ID_By_recv_info2Result" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Is_recv_info_HasSaved">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sendentity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="creattime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="dcmdnum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="senderid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Is_recv_info_HasSavedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Is_recv_info_HasSavedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_SignRecord_data">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_SignRecord_dataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_SignRecord_dataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_DCMD_SignRecord.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_SignRecord_By_DCMDID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dcmdid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_SignRecord_By_DCMDIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_SignRecord_By_DCMDIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_DCMD_SignRecord.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_SignRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_DCMD_SignRecord.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_SignRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_SignRecordResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Dcmd_main">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Dcmd_mainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Insert_Dcmd_mainResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="HelloSoapIn">
+    <part name="parameters" element="s0:Hello" />
+  </message>
+  <message name="HelloSoapOut">
+    <part name="parameters" element="s0:HelloResponse" />
+  </message>
+  <message name="Is_DB_ConnectedSoapIn">
+    <part name="parameters" element="s0:Is_DB_Connected" />
+  </message>
+  <message name="Is_DB_ConnectedSoapOut">
+    <part name="parameters" element="s0:Is_DB_ConnectedResponse" />
+  </message>
+  <message name="Get_dcmd_index_by_ConditionSoapIn">
+    <part name="parameters" element="s0:Get_dcmd_index_by_Condition" />
+  </message>
+  <message name="Get_dcmd_index_by_ConditionSoapOut">
+    <part name="parameters" element="s0:Get_dcmd_index_by_ConditionResponse" />
+  </message>
+  <message name="Get_dcmd_By_dcmdidSoapIn">
+    <part name="parameters" element="s0:Get_dcmd_By_dcmdid" />
+  </message>
+  <message name="Get_dcmd_By_dcmdidSoapOut">
+    <part name="parameters" element="s0:Get_dcmd_By_dcmdidResponse" />
+  </message>
+  <message name="Update_DcmdSoapIn">
+    <part name="parameters" element="s0:Update_Dcmd" />
+  </message>
+  <message name="Update_DcmdSoapOut">
+    <part name="parameters" element="s0:Update_DcmdResponse" />
+  </message>
+  <message name="Is_All_SignaledSoapIn">
+    <part name="parameters" element="s0:Is_All_Signaled" />
+  </message>
+  <message name="Is_All_SignaledSoapOut">
+    <part name="parameters" element="s0:Is_All_SignaledResponse" />
+  </message>
+  <message name="Update_Dcmd_and_DcmdNumSoapIn">
+    <part name="parameters" element="s0:Update_Dcmd_and_DcmdNum" />
+  </message>
+  <message name="Update_Dcmd_and_DcmdNumSoapOut">
+    <part name="parameters" element="s0:Update_Dcmd_and_DcmdNumResponse" />
+  </message>
+  <message name="Delete_Dcmd_By_DcmdidSoapIn">
+    <part name="parameters" element="s0:Delete_Dcmd_By_Dcmdid" />
+  </message>
+  <message name="Delete_Dcmd_By_DcmdidSoapOut">
+    <part name="parameters" element="s0:Delete_Dcmd_By_DcmdidResponse" />
+  </message>
+  <message name="Get_dcmd_template_allSoapIn">
+    <part name="parameters" element="s0:Get_dcmd_template_all" />
+  </message>
+  <message name="Get_dcmd_template_allSoapOut">
+    <part name="parameters" element="s0:Get_dcmd_template_allResponse" />
+  </message>
+  <message name="Update_Dcmd_TemplateSoapIn">
+    <part name="parameters" element="s0:Update_Dcmd_Template" />
+  </message>
+  <message name="Update_Dcmd_TemplateSoapOut">
+    <part name="parameters" element="s0:Update_Dcmd_TemplateResponse" />
+  </message>
+  <message name="IS_DcmdNumber_ValidatedSoapIn">
+    <part name="parameters" element="s0:IS_DcmdNumber_Validated" />
+  </message>
+  <message name="IS_DcmdNumber_ValidatedSoapOut">
+    <part name="parameters" element="s0:IS_DcmdNumber_ValidatedResponse" />
+  </message>
+  <message name="Get_Next_DCMD_NumberSoapIn">
+    <part name="parameters" element="s0:Get_Next_DCMD_Number" />
+  </message>
+  <message name="Get_Next_DCMD_NumberSoapOut">
+    <part name="parameters" element="s0:Get_Next_DCMD_NumberResponse" />
+  </message>
+  <message name="Reset_DcmdNumberSoapIn">
+    <part name="parameters" element="s0:Reset_DcmdNumber" />
+  </message>
+  <message name="Reset_DcmdNumberSoapOut">
+    <part name="parameters" element="s0:Reset_DcmdNumberResponse" />
+  </message>
+  <message name="Reset_DcmdNumber_By_DCMD_DATESoapIn">
+    <part name="parameters" element="s0:Reset_DcmdNumber_By_DCMD_DATE" />
+  </message>
+  <message name="Reset_DcmdNumber_By_DCMD_DATESoapOut">
+    <part name="parameters" element="s0:Reset_DcmdNumber_By_DCMD_DATEResponse" />
+  </message>
+  <message name="Get_Dcmd_Number_Setting_AllSoapIn">
+    <part name="parameters" element="s0:Get_Dcmd_Number_Setting_All" />
+  </message>
+  <message name="Get_Dcmd_Number_Setting_AllSoapOut">
+    <part name="parameters" element="s0:Get_Dcmd_Number_Setting_AllResponse" />
+  </message>
+  <message name="Update_Dcmd_Number_SettingSoapIn">
+    <part name="parameters" element="s0:Update_Dcmd_Number_Setting" />
+  </message>
+  <message name="Update_Dcmd_Number_SettingSoapOut">
+    <part name="parameters" element="s0:Update_Dcmd_Number_SettingResponse" />
+  </message>
+  <message name="Update_Recv_StatusSoapIn">
+    <part name="parameters" element="s0:Update_Recv_Status" />
+  </message>
+  <message name="Update_Recv_StatusSoapOut">
+    <part name="parameters" element="s0:Update_Recv_StatusResponse" />
+  </message>
+  <message name="Update_Signal_Status_LocalSoapIn">
+    <part name="parameters" element="s0:Update_Signal_Status_Local" />
+  </message>
+  <message name="Update_Signal_Status_LocalSoapOut">
+    <part name="parameters" element="s0:Update_Signal_Status_LocalResponse" />
+  </message>
+  <message name="Get_DCMD_ID_By_recv_infoSoapIn">
+    <part name="parameters" element="s0:Get_DCMD_ID_By_recv_info" />
+  </message>
+  <message name="Get_DCMD_ID_By_recv_infoSoapOut">
+    <part name="parameters" element="s0:Get_DCMD_ID_By_recv_infoResponse" />
+  </message>
+  <message name="Get_DCMD_ID_By_recv_info2SoapIn">
+    <part name="parameters" element="s0:Get_DCMD_ID_By_recv_info2" />
+  </message>
+  <message name="Get_DCMD_ID_By_recv_info2SoapOut">
+    <part name="parameters" element="s0:Get_DCMD_ID_By_recv_info2Response" />
+  </message>
+  <message name="Is_recv_info_HasSavedSoapIn">
+    <part name="parameters" element="s0:Is_recv_info_HasSaved" />
+  </message>
+  <message name="Is_recv_info_HasSavedSoapOut">
+    <part name="parameters" element="s0:Is_recv_info_HasSavedResponse" />
+  </message>
+  <message name="Get_SignRecord_dataSoapIn">
+    <part name="parameters" element="s0:Get_SignRecord_data" />
+  </message>
+  <message name="Get_SignRecord_dataSoapOut">
+    <part name="parameters" element="s0:Get_SignRecord_dataResponse" />
+  </message>
+  <message name="Get_SignRecord_By_DCMDIDSoapIn">
+    <part name="parameters" element="s0:Get_SignRecord_By_DCMDID" />
+  </message>
+  <message name="Get_SignRecord_By_DCMDIDSoapOut">
+    <part name="parameters" element="s0:Get_SignRecord_By_DCMDIDResponse" />
+  </message>
+  <message name="Update_SignRecordSoapIn">
+    <part name="parameters" element="s0:Update_SignRecord" />
+  </message>
+  <message name="Update_SignRecordSoapOut">
+    <part name="parameters" element="s0:Update_SignRecordResponse" />
+  </message>
+  <message name="Insert_Dcmd_mainSoapIn">
+    <part name="parameters" element="s0:Insert_Dcmd_main" />
+  </message>
+  <message name="Insert_Dcmd_mainSoapOut">
+    <part name="parameters" element="s0:Insert_Dcmd_mainResponse" />
+  </message>
+  <portType name="WS_DCMDSoap">
+    <operation name="Hello">
+      <input message="s0:HelloSoapIn" />
+      <output message="s0:HelloSoapOut" />
+    </operation>
+    <operation name="Is_DB_Connected">
+      <input message="s0:Is_DB_ConnectedSoapIn" />
+      <output message="s0:Is_DB_ConnectedSoapOut" />
+    </operation>
+    <operation name="Get_dcmd_index_by_Condition">
+      <input message="s0:Get_dcmd_index_by_ConditionSoapIn" />
+      <output message="s0:Get_dcmd_index_by_ConditionSoapOut" />
+    </operation>
+    <operation name="Get_dcmd_By_dcmdid">
+      <input message="s0:Get_dcmd_By_dcmdidSoapIn" />
+      <output message="s0:Get_dcmd_By_dcmdidSoapOut" />
+    </operation>
+    <operation name="Update_Dcmd">
+      <input message="s0:Update_DcmdSoapIn" />
+      <output message="s0:Update_DcmdSoapOut" />
+    </operation>
+    <operation name="Is_All_Signaled">
+      <input message="s0:Is_All_SignaledSoapIn" />
+      <output message="s0:Is_All_SignaledSoapOut" />
+    </operation>
+    <operation name="Update_Dcmd_and_DcmdNum">
+      <input message="s0:Update_Dcmd_and_DcmdNumSoapIn" />
+      <output message="s0:Update_Dcmd_and_DcmdNumSoapOut" />
+    </operation>
+    <operation name="Delete_Dcmd_By_Dcmdid">
+      <input message="s0:Delete_Dcmd_By_DcmdidSoapIn" />
+      <output message="s0:Delete_Dcmd_By_DcmdidSoapOut" />
+    </operation>
+    <operation name="Get_dcmd_template_all">
+      <input message="s0:Get_dcmd_template_allSoapIn" />
+      <output message="s0:Get_dcmd_template_allSoapOut" />
+    </operation>
+    <operation name="Update_Dcmd_Template">
+      <input message="s0:Update_Dcmd_TemplateSoapIn" />
+      <output message="s0:Update_Dcmd_TemplateSoapOut" />
+    </operation>
+    <operation name="IS_DcmdNumber_Validated">
+      <input message="s0:IS_DcmdNumber_ValidatedSoapIn" />
+      <output message="s0:IS_DcmdNumber_ValidatedSoapOut" />
+    </operation>
+    <operation name="Get_Next_DCMD_Number">
+      <input message="s0:Get_Next_DCMD_NumberSoapIn" />
+      <output message="s0:Get_Next_DCMD_NumberSoapOut" />
+    </operation>
+    <operation name="Reset_DcmdNumber">
+      <input message="s0:Reset_DcmdNumberSoapIn" />
+      <output message="s0:Reset_DcmdNumberSoapOut" />
+    </operation>
+    <operation name="Reset_DcmdNumber_By_DCMD_DATE">
+      <input message="s0:Reset_DcmdNumber_By_DCMD_DATESoapIn" />
+      <output message="s0:Reset_DcmdNumber_By_DCMD_DATESoapOut" />
+    </operation>
+    <operation name="Get_Dcmd_Number_Setting_All">
+      <input message="s0:Get_Dcmd_Number_Setting_AllSoapIn" />
+      <output message="s0:Get_Dcmd_Number_Setting_AllSoapOut" />
+    </operation>
+    <operation name="Update_Dcmd_Number_Setting">
+      <input message="s0:Update_Dcmd_Number_SettingSoapIn" />
+      <output message="s0:Update_Dcmd_Number_SettingSoapOut" />
+    </operation>
+    <operation name="Update_Recv_Status">
+      <input message="s0:Update_Recv_StatusSoapIn" />
+      <output message="s0:Update_Recv_StatusSoapOut" />
+    </operation>
+    <operation name="Update_Signal_Status_Local">
+      <input message="s0:Update_Signal_Status_LocalSoapIn" />
+      <output message="s0:Update_Signal_Status_LocalSoapOut" />
+    </operation>
+    <operation name="Get_DCMD_ID_By_recv_info">
+      <input message="s0:Get_DCMD_ID_By_recv_infoSoapIn" />
+      <output message="s0:Get_DCMD_ID_By_recv_infoSoapOut" />
+    </operation>
+    <operation name="Get_DCMD_ID_By_recv_info2">
+      <input message="s0:Get_DCMD_ID_By_recv_info2SoapIn" />
+      <output message="s0:Get_DCMD_ID_By_recv_info2SoapOut" />
+    </operation>
+    <operation name="Is_recv_info_HasSaved">
+      <input message="s0:Is_recv_info_HasSavedSoapIn" />
+      <output message="s0:Is_recv_info_HasSavedSoapOut" />
+    </operation>
+    <operation name="Get_SignRecord_data">
+      <input message="s0:Get_SignRecord_dataSoapIn" />
+      <output message="s0:Get_SignRecord_dataSoapOut" />
+    </operation>
+    <operation name="Get_SignRecord_By_DCMDID">
+      <input message="s0:Get_SignRecord_By_DCMDIDSoapIn" />
+      <output message="s0:Get_SignRecord_By_DCMDIDSoapOut" />
+    </operation>
+    <operation name="Update_SignRecord">
+      <input message="s0:Update_SignRecordSoapIn" />
+      <output message="s0:Update_SignRecordSoapOut" />
+    </operation>
+    <operation name="Insert_Dcmd_main">
+      <input message="s0:Insert_Dcmd_mainSoapIn" />
+      <output message="s0:Insert_Dcmd_mainSoapOut" />
+    </operation>
+  </portType>
+  <binding name="WS_DCMDSoap" type="s0:WS_DCMDSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Hello">
+      <soap:operation soapAction="http://tempuri.org/Hello" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Is_DB_Connected">
+      <soap:operation soapAction="http://tempuri.org/Is_DB_Connected" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_dcmd_index_by_Condition">
+      <soap:operation soapAction="http://tempuri.org/Get_dcmd_index_by_Condition" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_dcmd_By_dcmdid">
+      <soap:operation soapAction="http://tempuri.org/Get_dcmd_By_dcmdid" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Update_Dcmd">
+      <soap:operation soapAction="http://tempuri.org/Update_Dcmd" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Is_All_Signaled">
+      <soap:operation soapAction="http://tempuri.org/Is_All_Signaled" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Update_Dcmd_and_DcmdNum">
+      <soap:operation soapAction="http://tempuri.org/Update_Dcmd_and_DcmdNum" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Delete_Dcmd_By_Dcmdid">
+      <soap:operation soapAction="http://tempuri.org/Delete_Dcmd_By_Dcmdid" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_dcmd_template_all">
+      <soap:operation soapAction="http://tempuri.org/Get_dcmd_template_all" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Update_Dcmd_Template">
+      <soap:operation soapAction="http://tempuri.org/Update_Dcmd_Template" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IS_DcmdNumber_Validated">
+      <soap:operation soapAction="http://tempuri.org/IS_DcmdNumber_Validated" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_Next_DCMD_Number">
+      <soap:operation soapAction="http://tempuri.org/Get_Next_DCMD_Number" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Reset_DcmdNumber">
+      <soap:operation soapAction="http://tempuri.org/Reset_DcmdNumber" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Reset_DcmdNumber_By_DCMD_DATE">
+      <soap:operation soapAction="http://tempuri.org/Reset_DcmdNumber_By_DCMD_DATE" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_Dcmd_Number_Setting_All">
+      <soap:operation soapAction="http://tempuri.org/Get_Dcmd_Number_Setting_All" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Update_Dcmd_Number_Setting">
+      <soap:operation soapAction="http://tempuri.org/Update_Dcmd_Number_Setting" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Update_Recv_Status">
+      <soap:operation soapAction="http://tempuri.org/Update_Recv_Status" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Update_Signal_Status_Local">
+      <soap:operation soapAction="http://tempuri.org/Update_Signal_Status_Local" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_DCMD_ID_By_recv_info">
+      <soap:operation soapAction="http://tempuri.org/Get_DCMD_ID_By_recv_info" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_DCMD_ID_By_recv_info2">
+      <soap:operation soapAction="http://tempuri.org/Get_DCMD_ID_By_recv_info2" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Is_recv_info_HasSaved">
+      <soap:operation soapAction="http://tempuri.org/Is_recv_info_HasSaved" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_SignRecord_data">
+      <soap:operation soapAction="http://tempuri.org/Get_SignRecord_data" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_SignRecord_By_DCMDID">
+      <soap:operation soapAction="http://tempuri.org/Get_SignRecord_By_DCMDID" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Update_SignRecord">
+      <soap:operation soapAction="http://tempuri.org/Update_SignRecord" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Insert_Dcmd_main">
+      <soap:operation soapAction="http://tempuri.org/Insert_Dcmd_main" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="WS_DCMDSoap12" type="s0:WS_DCMDSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="Hello">
+      <soap12:operation soapAction="http://tempuri.org/Hello" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Is_DB_Connected">
+      <soap12:operation soapAction="http://tempuri.org/Is_DB_Connected" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_dcmd_index_by_Condition">
+      <soap12:operation soapAction="http://tempuri.org/Get_dcmd_index_by_Condition" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_dcmd_By_dcmdid">
+      <soap12:operation soapAction="http://tempuri.org/Get_dcmd_By_dcmdid" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Update_Dcmd">
+      <soap12:operation soapAction="http://tempuri.org/Update_Dcmd" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Is_All_Signaled">
+      <soap12:operation soapAction="http://tempuri.org/Is_All_Signaled" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Update_Dcmd_and_DcmdNum">
+      <soap12:operation soapAction="http://tempuri.org/Update_Dcmd_and_DcmdNum" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Delete_Dcmd_By_Dcmdid">
+      <soap12:operation soapAction="http://tempuri.org/Delete_Dcmd_By_Dcmdid" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_dcmd_template_all">
+      <soap12:operation soapAction="http://tempuri.org/Get_dcmd_template_all" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Update_Dcmd_Template">
+      <soap12:operation soapAction="http://tempuri.org/Update_Dcmd_Template" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="IS_DcmdNumber_Validated">
+      <soap12:operation soapAction="http://tempuri.org/IS_DcmdNumber_Validated" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_Next_DCMD_Number">
+      <soap12:operation soapAction="http://tempuri.org/Get_Next_DCMD_Number" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Reset_DcmdNumber">
+      <soap12:operation soapAction="http://tempuri.org/Reset_DcmdNumber" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Reset_DcmdNumber_By_DCMD_DATE">
+      <soap12:operation soapAction="http://tempuri.org/Reset_DcmdNumber_By_DCMD_DATE" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_Dcmd_Number_Setting_All">
+      <soap12:operation soapAction="http://tempuri.org/Get_Dcmd_Number_Setting_All" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Update_Dcmd_Number_Setting">
+      <soap12:operation soapAction="http://tempuri.org/Update_Dcmd_Number_Setting" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Update_Recv_Status">
+      <soap12:operation soapAction="http://tempuri.org/Update_Recv_Status" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Update_Signal_Status_Local">
+      <soap12:operation soapAction="http://tempuri.org/Update_Signal_Status_Local" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_DCMD_ID_By_recv_info">
+      <soap12:operation soapAction="http://tempuri.org/Get_DCMD_ID_By_recv_info" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_DCMD_ID_By_recv_info2">
+      <soap12:operation soapAction="http://tempuri.org/Get_DCMD_ID_By_recv_info2" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Is_recv_info_HasSaved">
+      <soap12:operation soapAction="http://tempuri.org/Is_recv_info_HasSaved" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_SignRecord_data">
+      <soap12:operation soapAction="http://tempuri.org/Get_SignRecord_data" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_SignRecord_By_DCMDID">
+      <soap12:operation soapAction="http://tempuri.org/Get_SignRecord_By_DCMDID" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Update_SignRecord">
+      <soap12:operation soapAction="http://tempuri.org/Update_SignRecord" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Insert_Dcmd_main">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Dcmd_main" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_DCMD">
+    <port name="WS_DCMDSoap" binding="s0:WS_DCMDSoap">
+      <soap:address location="http://192.100.88.226:1111/ws_dcmd.asmx" />
+    </port>
+    <port name="WS_DCMDSoap12" binding="s0:WS_DCMDSoap12">
+      <soap12:address location="http://192.100.88.226:1111/ws_dcmd.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/ds_dcmd_index.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/ds_dcmd_index.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/ds_dcmd_index.xsd" id="ds_dcmd_index" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="ds_dcmd_index">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DCMD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DCMD_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DCMD_STYLE_TITLE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DCMD_NUM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SEND_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SENDER_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SENDER_UNIT_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RECVER">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="STATUS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SEND_ENTITY" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CREATE_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EDIT_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SENDER_ID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="AUTHOR_STATUS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="AUTHOR_TIME" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DUTYCHIEF_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NEED_AUTHOR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TCC_LEN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="JHH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SYNC_STATUS" type="xs:short" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:DCMD" />
+      <xs:field xpath="mstns:DCMD_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

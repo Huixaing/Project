@@ -1,0 +1,165 @@
+// TG.idl : ActiveX 控件项目的类型库源。
+
+// 此文件将由 MIDL 编译器工具处理以
+//产生类型库(TG.tlb)，该类型库将成为 
+// TG.ocx 中的资源。
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(BAC7824F-76B8-407C-B56E-315E816248E3), version(1.0),
+  helpfile("TG.hlp"),
+  helpstring("TG ActiveX 控件模块"),
+  control ]
+library TGLib
+{
+	importlib(STDOLE_TLB);
+
+	//  CTGCtrl 的主调度接口
+
+	[ uuid(454E72C2-812B-43CC-ADD1-EBDC2D79E5C2),
+	  helpstring("TG Control 的调度接口")]
+	dispinterface _DTG
+	{
+		properties:
+		methods:
+			[id(1), helpstring("方法TgStart")] void TgStart(BSTR filename);
+			[id(2), helpstring("方法SetDisplayFlag")] void SetTrainDisplayFlag(SHORT type, SHORT val);
+			[id(3), helpstring("方法SetBackGroud")] void SetBackGroud(USHORT flag);
+			[id(4), helpstring("方法SetTgType")] void SetTgType(BYTE type);
+			
+			
+			[id(5), helpstring("方法SetBackgroudBeginHour")] void SetBackgroudBeginHour(BYTE begin_hour);
+			[id(6), helpstring("方法SetBackgroudTimeLength")] void SetBackgroudTimeLength(BYTE nHours);
+			[id(7), helpstring("方法SetStationInfo")] void SetStationInfo(BSTR xml);
+			[id(8), helpstring("方法SetCurrentSectionSet")] void SetCurrentSectionId(SHORT flag);
+			[id(9), helpstring("方法SetShiftId")] void SetShiftId(ULONG nshiftid, SHORT nCurValue);	
+			
+			[id(10), helpstring("方法DeleteMutiTrain")] void DeleteMutiTrain(void);
+			[id(11), helpstring("方法DrawSpecialTrain")] SHORT DrawSpecialTrain(SHORT trainType);
+			[id(12), helpstring("方法FindTrain")] void FindTrain(void);
+			[id(13), helpstring("方法TrainsOperator")] void TrainsOperator(SHORT oper, SHORT rst);
+			[id(14), helpstring("方法SelectSection")] SHORT SelectSection(SHORT nSection,LONG nFlag);
+			
+			[id(15), helpstring("方法ZoomIn")] SHORT ZoomIn(SHORT param);
+			[id(16), helpstring("方法ZoomOut")] SHORT ZoomOut(SHORT param);
+			[id(17), helpstring("方法GetZoomStatus")] SHORT GetZoomStatus(void);			
+			[id(18), helpstring("方法SetStationConnectStatus")] void SetStationConnectStatus(SHORT nStaId, BYTE active);
+			[id(19), helpstring("方法SetCtrlMode")] void SetCtrlMode(SHORT nStaId, SHORT sta_ctrl_mode, SHORT route_ctrl_mode);
+		
+			[id(20), helpstring("方法GetTrainDisplayFlag")] SHORT GetTrainDisplayFlag(SHORT type, SHORT val);
+			[id(21), helpstring("方法SaveToPicture")] void SaveToPicture(BSTR pathname);
+			[id(22), helpstring("方法NewMark")] void NewMark(SHORT mark_type);
+			[id(23), helpstring("方法BeginNewSingleTrain")] void BeginNewSingleTrain(BSTR strTrainId, BSTR strChangeTrainId, BYTE inMode, BYTE outMode);
+			[id(24), helpstring("方法EndNewSingleTrain")] void EndNewSingleTrain(void);
+			
+			[id(25), helpstring("方法DeleteTrain")] void DeleteTrain(LONG nIndex, LONG dwLogicFlag);
+			[id(28), helpstring("方法DeleteMark")] void DeleteMark(LONG nIndex, BSTR xml);
+			
+			[id(31), helpstring("方法EndLoadData")] void EndLoadData(void);
+			[id(32), helpstring("方法BeginLoadData")] void BeginLoadData(void);
+			[id(33), helpstring("方法TurnReality")] void TurnReality(void);
+			[id(34), helpstring("方法ReceivePoint")] void ReceivePoint(void);
+
+			[id(35), helpstring("方法SetAppCtrlWord")] void SetAppCtrlWord(ULONG word);
+			[id(36), helpstring("方法SetLineCtrlWord")] void SetLineCtrlWord(ULONG word);
+			[id(37), helpstring("方法SetMarkCtrlWord")] void SetMarkCtrlWord(ULONG word);
+			[id(38), helpstring("方法GetAppCtrlWord")] ULONG GetAppCtrlWord(void);
+			[id(39), helpstring("方法GetLineCtrlWord")] ULONG GetLineCtrlWord(void);
+
+			[id(40), helpstring("方法GetMarkCtrlWord")] ULONG GetMarkCtrlWord(void);
+			[id(41), helpstring("方法SetOperateRight")] void SetOperateRight(BYTE right);
+			[id(42), helpstring("方法GetOperateRight")] BYTE GetOperateRight(void);
+			[id(43), helpstring("方法SetLeapLineFlag")] void SetLeapLineFlag(BYTE flag);
+			[id(44), helpstring("方法SetDrawTenicalStopMark")] void SetDrawTenicalStopMark(SHORT flag);
+			
+			[id(45), helpstring("方法SetUseBmp")] void SetUseBmp(BYTE flag);
+			[id(46), helpstring("方法SetAllStationActive")] void SetAllStationActive(void);
+			[id(47), helpstring("方法SetPlanRecieveFlag")] void SetPlanRecieveFlag(BYTE nType, ULONG id, ULONG color);
+			[id(48), helpstring("方法SetLeapTrainShow")] void SetLeapTrainShow(BYTE nFlag);
+			[id(49), helpstring("方法SetRouteOkMarkFlag")] void SetRouteOkMarkFlag(BYTE flag);
+
+			[id(50), helpstring("方法AliveWindow")] void AliveWindow(ULONG nFlag);
+			[id(51), helpstring("方法GetCurrentSectionID")] ULONG GetCurrentSectionID(void);
+			[id(52), helpstring("方法SetTrainDefaultInfo")] void SetTrainDefaultInfo(VARIANT msg);
+			[id(53), helpstring("方法GetTgVersion")] BSTR GetTgVersion(void);
+			[id(54), helpstring("方法GenTrainExitEntryByStationIndex")] BSTR GenTrainExitEntryByStationIndex(VARIANT msg);
+			[id(55), helpstring("方法ShowWholeScreen")] void ShowWholeScreen(BYTE nFlag);
+			[id(56), helpstring("方法SetContrlRight")] void SetContrlRight(ULONG nFlag);
+			[id(57), helpstring("方法GetPlotParam")] void GetPlotParam(ULONG nFlag);
+			[id(58), helpstring("方法GetTgData")] void GetTgData(ULONG flag);
+			[id(59), helpstring("方法SetBasicTrainWholeMove")] void SetBasicTrainWholeMove(BYTE nFlag);
+			[id(60), helpstring("方法RefreshTG")] void RefreshTG(ULONG nFlag);
+			[id(61), helpstring("方法BeginNewSingleTrainXml")] void BeginNewSingleTrainXml(BSTR xml);
+			[id(62), helpstring("方法TGGenTrainNodeIndex")] void TGGenTrainNodeIndex(BSTR xml);
+			[id(63), helpstring("方法AppendEarlyLateInfo")] void AppendEarlyLateInfo(BSTR xml, LONG val, LONG shiftid);
+			[id(64), helpstring("方法SetWinTGOperateRight")] void SetWinTGOperateRight(DWORD right);
+			[id(65), helpstring("方法SetUseVirtualMemory")] void SetUseVirtualMemory(short val);
+			[id(66), helpstring("方法SetWidePixel")] void SetWidePixel(short val);
+			[id(67), helpstring("方法OnSetBatchDrawEnv")] void OnSetBatchDrawEnv(LONG nFlag);
+			[id(68), helpstring("方法OnBeginDraw")] void OnBeginDraw(LONG nFlag);
+			[id(69), helpstring("方法OnBatchSchduleData")] LONG OnBatchSchduleData(VARIANT msg);
+			[id(70), helpstring("方法IsBatchStatus")] BYTE IsBatchStatus(void);
+			[id(71), helpstring("方法SetBackGroudInfo")] void SetBackGroudInfo(ULONG nshiftid, ULONG nBeginTm, SHORT nAutoMove, SHORT nTotalLen, SHORT nHistoryLen);
+			[id(72), helpstring("方法NewShiftBanci")] void NewShiftBanci(void);
+			[id(73), helpstring("方法GetLoginShiftId")] ULONG GetLoginShiftId(void);
+
+			[id(74), helpstring("方法GetShiftBeginTime")] ULONG GetShiftBeginTime(void);
+			[id(75), helpstring("方法GetHistoryLen")] ULONG GetHistoryLen(void);
+			[id(76), helpstring("方法GetAutoMove")] ULONG GetAutoMove(void);
+			[id(77), helpstring("方法TrainIsExistInOCX")] ULONG TrainIsExistInOCX(ULONG trainindex, ULONG data_type);
+			[id(78), helpstring("方法SetSectionInfo")] void SetSectionInfo(BSTR xml);
+			[id(79), helpstring("方法AddBStplanStation")] void AddBStplanStation(ULONG station);
+			[id(80), helpstring("方法UsingWorkGoodMode")] void UsingWorkGoodMode(void);
+			[id(81), helpstring("方法MoveTGOCXOneStep")] void MoveTGOCXOneStep(void);
+			[id(82), helpstring("方法SetUserRight")] void SetUserRight(LONG nRight);
+			[id(83), helpstring("方法AddNotMeetInfo")] void AddNotMeetInfo(SHORT not_meet_flag, BSTR name, BSTR short_name);
+			[id(84), helpstring("方法OnFindTrainByTrainIndex")] void OnFindTrainByTrainIndex(LONG nRight);
+			[id(85), helpstring("方法SetFormatView")] void SetFormatView(void);
+			[id(86), helpstring("方法CheckSideByRelation")] BSTR CheckSideByRelation(VARIANT msg);
+			[id(87), helpstring("方法GetTrainJiaoRelation")] BSTR GetTrainJiaoRelation(ULONG nTrainIndex);
+	};
+
+	//  CTGCtrl 的事件调度接口
+
+	[ uuid(9B8ABB96-1638-4E78-A34F-2D3D6479E6B1),
+	  helpstring("TG Control 的事件接口") ]
+	dispinterface _DTGEvents
+	{
+		properties:
+			//  事件接口没有任何属性
+
+		methods:
+		[id(1)] void TG_APPEND_MARK(LONG nIndex, BSTR xml);
+		[id(2)] void TG_UPDATE_MARK(LONG nIndex, BSTR xml);
+		[id(3)] void TG_DELETE_MARK(LONG nIndex, BSTR xml);
+
+		[id(4)] void TG_APPEND_TRAIN(LONG nIndex, BSTR xml);
+		[id(5)] void TG_UPDATE_TRAIN(LONG nIndex, BSTR xml);
+		[id(6)] void TG_DELETE_TRAIN(LONG nIndex, BSTR xml);
+
+		[id(7)] void TG_LOG(BSTR log);
+		[id(8)] void TG_SELECT_TRAIN(ULONG train_index, ULONG nFlag, USHORT stano1, USHORT stano2, ULONG date, ULONG time);
+		[id(9)] void FIRE_SELECT_MARK(ULONG index, BYTE type, BYTE flag, USHORT stano1, USHORT stano2, ULONG param);
+		[id(10)] void TG_NOTICE(BYTE nType, ULONG nFlag, ULONG nIndex, USHORT nStaNo);
+		[id(11)] void TG_SET_TRAIN_DEFAULT_INFO(BSTR train_xml, LONG nFlag);
+		[id(12)] void TG_GEN_BLOCK_DCMD(BSTR xml, ULONG index, ULONG type);
+		[id(13)] void FIRE_SET_PLOT_PARAM(BSTR param_xml, ULONG nFlag);
+		[id(14)] void FIRE_DELETE(BSTR xml);
+		[id(15)] void FIRE_REAL_TIME(ULONG train_index, SHORT rec_index, ULONG adjust_flag, ULONG arrive, ULONG depart, USHORT station);
+		[id(16)] void AddEarlyLateInfo(BSTR key, BYTE val, LONG shiftid);
+		[id(17)] void FIRE_SHOW_CREW(ULONG index, ULONG x, ULONG y);
+
+	};
+
+	//  CTGCtrl 的类信息
+
+	[ uuid(EE53802C-2D94-483C-8C4D-916B80552811),
+	  helpstring("TG Control"), control ]
+	coclass TG
+	{
+		[default] dispinterface _DTG;
+		[default, source] dispinterface _DTGEvents;
+	};
+
+};

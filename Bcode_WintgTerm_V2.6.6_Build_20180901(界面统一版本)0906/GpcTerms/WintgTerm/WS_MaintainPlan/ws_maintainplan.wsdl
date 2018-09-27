@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/ds_MaintainPlan_List.xsd" />
+      <s:import namespace="http://tempuri.org/ds_MaintainPlan.xsd" />
+      <s:import schemaLocation="http://192.100.88.226:1111/ws_maintainplan.asmx?schema=ds_MaintainPlan_List" namespace="http://tempuri.org/ds_MaintainPlan_List.xsd" />
+      <s:import schemaLocation="http://192.100.88.226:1111/ws_maintainplan.asmx?schema=ds_MaintainPlan" namespace="http://tempuri.org/ds_MaintainPlan.xsd" />
+      <s:element name="IsReady">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsReadyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsReadyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_MaintainPlan_List">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_MaintainPlan_ListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_MaintainPlan_ListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_MaintainPlan_List.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetData_By_JHH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Jhh" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetData_By_JHHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetData_By_JHHResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_MaintainPlan.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_MaintainPlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/ds_MaintainPlan.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_MaintainPlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_MaintainPlanResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Result">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="succeed" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Update_MaintainPlan2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_MaintainPlan2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_MaintainPlan2Result" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delect_MaintianPlan_By_Jhh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Jhh" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delect_MaintianPlan_By_JhhResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Delect_MaintianPlan_By_JhhResult" type="s0:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="IsReadySoapIn">
+    <part name="parameters" element="s0:IsReady" />
+  </message>
+  <message name="IsReadySoapOut">
+    <part name="parameters" element="s0:IsReadyResponse" />
+  </message>
+  <message name="Get_MaintainPlan_ListSoapIn">
+    <part name="parameters" element="s0:Get_MaintainPlan_List" />
+  </message>
+  <message name="Get_MaintainPlan_ListSoapOut">
+    <part name="parameters" element="s0:Get_MaintainPlan_ListResponse" />
+  </message>
+  <message name="GetData_By_JHHSoapIn">
+    <part name="parameters" element="s0:GetData_By_JHH" />
+  </message>
+  <message name="GetData_By_JHHSoapOut">
+    <part name="parameters" element="s0:GetData_By_JHHResponse" />
+  </message>
+  <message name="Update_MaintainPlanSoapIn">
+    <part name="parameters" element="s0:Update_MaintainPlan" />
+  </message>
+  <message name="Update_MaintainPlanSoapOut">
+    <part name="parameters" element="s0:Update_MaintainPlanResponse" />
+  </message>
+  <message name="Update_MaintainPlan2SoapIn">
+    <part name="parameters" element="s0:Update_MaintainPlan2" />
+  </message>
+  <message name="Update_MaintainPlan2SoapOut">
+    <part name="parameters" element="s0:Update_MaintainPlan2Response" />
+  </message>
+  <message name="Delect_MaintianPlan_By_JhhSoapIn">
+    <part name="parameters" element="s0:Delect_MaintianPlan_By_Jhh" />
+  </message>
+  <message name="Delect_MaintianPlan_By_JhhSoapOut">
+    <part name="parameters" element="s0:Delect_MaintianPlan_By_JhhResponse" />
+  </message>
+  <portType name="WS_MaintainPlanSoap">
+    <operation name="IsReady">
+      <input message="s0:IsReadySoapIn" />
+      <output message="s0:IsReadySoapOut" />
+    </operation>
+    <operation name="Get_MaintainPlan_List">
+      <input message="s0:Get_MaintainPlan_ListSoapIn" />
+      <output message="s0:Get_MaintainPlan_ListSoapOut" />
+    </operation>
+    <operation name="GetData_By_JHH">
+      <input message="s0:GetData_By_JHHSoapIn" />
+      <output message="s0:GetData_By_JHHSoapOut" />
+    </operation>
+    <operation name="Update_MaintainPlan">
+      <input message="s0:Update_MaintainPlanSoapIn" />
+      <output message="s0:Update_MaintainPlanSoapOut" />
+    </operation>
+    <operation name="Update_MaintainPlan2">
+      <input message="s0:Update_MaintainPlan2SoapIn" />
+      <output message="s0:Update_MaintainPlan2SoapOut" />
+    </operation>
+    <operation name="Delect_MaintianPlan_By_Jhh">
+      <input message="s0:Delect_MaintianPlan_By_JhhSoapIn" />
+      <output message="s0:Delect_MaintianPlan_By_JhhSoapOut" />
+    </operation>
+  </portType>
+  <binding name="WS_MaintainPlanSoap" type="s0:WS_MaintainPlanSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="IsReady">
+      <soap:operation soapAction="http://tempuri.org/IsReady" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Get_MaintainPlan_List">
+      <soap:operation soapAction="http://tempuri.org/Get_MaintainPlan_List" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetData_By_JHH">
+      <soap:operation soapAction="http://tempuri.org/GetData_By_JHH" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Update_MaintainPlan">
+      <soap:operation soapAction="http://tempuri.org/Update_MaintainPlan" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Update_MaintainPlan2">
+      <soap:operation soapAction="http://tempuri.org/Update_MaintainPlan2" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Delect_MaintianPlan_By_Jhh">
+      <soap:operation soapAction="http://tempuri.org/Delect_MaintianPlan_By_Jhh" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="WS_MaintainPlanSoap12" type="s0:WS_MaintainPlanSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <operation name="IsReady">
+      <soap12:operation soapAction="http://tempuri.org/IsReady" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Get_MaintainPlan_List">
+      <soap12:operation soapAction="http://tempuri.org/Get_MaintainPlan_List" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="GetData_By_JHH">
+      <soap12:operation soapAction="http://tempuri.org/GetData_By_JHH" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Update_MaintainPlan">
+      <soap12:operation soapAction="http://tempuri.org/Update_MaintainPlan" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Update_MaintainPlan2">
+      <soap12:operation soapAction="http://tempuri.org/Update_MaintainPlan2" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+    <operation name="Delect_MaintianPlan_By_Jhh">
+      <soap12:operation soapAction="http://tempuri.org/Delect_MaintianPlan_By_Jhh" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </input>
+      <output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_MaintainPlan">
+    <port name="WS_MaintainPlanSoap" binding="s0:WS_MaintainPlanSoap">
+      <soap:address location="http://192.100.88.226:1111/ws_maintainplan.asmx" />
+    </port>
+    <port name="WS_MaintainPlanSoap12" binding="s0:WS_MaintainPlanSoap12">
+      <soap12:address location="http://192.100.88.226:1111/ws_maintainplan.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </port>
+  </service>
+</definitions>
