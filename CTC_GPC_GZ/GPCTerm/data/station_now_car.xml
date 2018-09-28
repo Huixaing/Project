@@ -1,0 +1,79 @@
+<?xml version="1.0"	encoding="GB2312"?>
+<station_car>
+	 <common1>
+		<car_kind name="棚车"	short_name="P"/>
+		<car_kind name="敞车"	short_name="C"/>
+		<car_kind name="平板车"	short_name="N"/>
+		<car_kind name="罐车"	short_name="G"/>
+		<car_kind name="保温车" short_name="B"/>
+		
+		<car_kind name="集装箱车" short_name="X"/>
+		<car_kind name="长大货车" short_name="D"/>
+		<car_kind name="矿石车" short_name="K"/>
+		<car_kind name="特种车" short_name="T"/>
+		<car_kind name="水泥车" short_name="U"/>
+		
+		<car_kind name="家畜车" short_name="J"/>
+		<car_kind name="毒车" short_name="W"/>	
+		<car_kind name="守车"	short_name="S"/>
+		<car_kind name="罐轻车"	short_name="GQ" />
+		<car_kind name="罐粘车"	short_name="GN" />
+		
+		<car_kind name="罐滑车"	short_name="GH" />
+		<car_kind name="机保车"	 short_name="BJ"/>
+		<car_kind name="其它"	short_name="O" />
+		<car_kind name="冰保车"	 short_name="BB"/>
+		<car_kind name="客车"	 short_name="KC"/>
+		
+		<car_kind name="罐其他" short_name="GT"/>
+		<car_kind name="机车"	 short_name="JC"/>		
+	 </common1>
+	 <car_type name="空车" short_name="空" plot_short_name="空">
+		<common name="common1"/>
+	 </car_type>
+	 <car_type name="重车" short_name="重" plot_short_name="重">
+		<common name="common1"/>
+	</car_type>
+	
+	<work_explain>
+		<car_explain name=" "/>
+		<car_explain name="卸"/>
+		<car_explain name="装"/>
+		<car_explain name="保留"/>
+		<car_explain name="待卸"/>
+		<car_explain name="待装"/>
+		<car_explain name="检修"/>
+		<car_explain name="洗刷"/>
+		<car_explain name="整理"/>
+	</work_explain>
+	
+	<carriage_apply>
+		<car_apply name=" "/>
+		<car_apply name="运用"/>
+		<car_apply name="厂修"/>
+		<car_apply name="段修"/>
+		<car_apply name="部备"/>
+		<car_apply name="发电"/>
+		<car_apply name="供应"/>
+		<car_apply name="回检"/>
+		<car_apply name="回送"/>
+		<car_apply name="军用"/>
+		<car_apply name="水罐"/>
+		<car_apply name="行包"/>
+		<car_apply name="整备"/>
+		<car_apply name="租用"/>
+		<car_apply name="待报废"/>
+		<car_apply name="工作车"/>
+		<car_apply name="检衡车"/>
+		<car_apply name="检修车"/>
+		<car_apply name="路用车"/>	
+		<car_apply name="生活车"/>
+		<car_apply name="洗罐车"/>
+		<car_apply name="代客货车"/>
+		<car_apply name="局管空车"/>
+		<car_apply name="整备罐车"/>
+		<car_apply name="租用空车"/>
+		<car_apply name="改装试验车"/>
+	</carriage_apply>
+</station_car>
+

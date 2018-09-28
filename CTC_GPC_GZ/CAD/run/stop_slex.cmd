@@ -1,0 +1,1 @@
+taskkill /F /IM svr_slex.exe /T

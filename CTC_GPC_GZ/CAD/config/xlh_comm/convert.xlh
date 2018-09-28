@@ -1,0 +1,14 @@
+[STA]
+143->120
+144->121
+138->115
+
+[STA_ENTRY]
+
+[STA_ENTRY_EXIT]
+
+[TYPE]
+
+[RUN_TYPE]
+7->5
+5->2

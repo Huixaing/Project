@@ -1,0 +1,17 @@
+;定义缺省选择占用时间方式
+DEFAULT_TIME_TYPE = COMMON_OCCUPTY_TIME
+
+;定义一个缺省值
+MIN_OCCUPY_TIME=3
+COMMON_OCCUPTY_TIME=5
+MAX_OCCUPY_TIME=7
+;route_id,	carriage_block,		occupy_time
+
+
+
+
+
+;定义缺省选择占用时间方式(3, 5, 7)
+DEFAULT_TIME_TYPE = 7
+
+;route_id,	carriage_block,		occupy_time

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<root>
+	<UserGroup>
+		<Group name="A" desc="计划员GPC_SCHEDULE">
+			<LayoutUserGroup name="A" />
+		</Group>
+		<Group name="B" desc="调度员GPC_DISPATCHER">
+			<LayoutUserGroup name="B" />
+		</Group>
+		<Group name="C" desc="操作员GPC_OPERATOR">
+			<LayoutUserGroup name="C" />
+		</Group>
+		<Group name="D" desc="调度长GPC_DISPATCHERS">
+			<LayoutUserGroup name="D" />
+		</Group>
+		<Group name="E" desc="背投GPC_SCREEN_LAYOUT">
+			<LayoutUserGroup name="E" />
+		</Group>
+		<Group name="F" desc="培训台GPC_TRAIN">
+			<LayoutUserGroup name="F" />
+		</Group>
+		<Group name="G" desc="GPC_SERVICE">
+			<LayoutUserGroup name="G" />
+		</Group>
+		<Group name="H" desc="电务维修GPC_MAINTAIN">
+			<LayoutUserGroup name="H" />
+		</Group>
+		<Group name="I" desc="绘图台GPC_PLOT">
+			<LayoutUserGroup name="I" />
+		</Group>
+		<Group name="J" desc="机调员台GPC_MACHINE">
+			<LayoutUserGroup name="J" />
+		</Group>
+		<Group name="K" desc="货调员台GPC_GOODS">
+			<LayoutUserGroup name="K" />
+		</Group>
+		<Group name="L" desc="统计台GPC_SCREEN_TG">
+			<LayoutUserGroup name="L" />
+		</Group>
+		<Group name="M" desc="GPC_AFFAIR_SERVER">
+			<LayoutUserGroup name="M" />
+		</Group>
+		<Group name="N" desc="值班主任GPC_SUPER_DISPATCH">
+			<LayoutUserGroup name="N" />
+		</Group>
+		<Group name="O" desc="调试员GPC_OTHER_DISPATCH">
+			<LayoutUserGroup name="O" />
+		</Group>
+		<Group name="P" desc="系统维护GPC_SUPER_MAINTAIN">
+			<LayoutUserGroup name="P" />
+		</Group>
+		<Group name="Q" desc="调试员GPC_TEST">
+			<LayoutUserGroup name="Q" />
+		</Group>
+		<Group name="R" desc="综合维修调度员GPC_MAP">
+			<LayoutUserGroup name="R" />
+		</Group>
+	</UserGroup>
+
+	<LayoutUserGroup desc="配置LayoutTerm权限组">
+		<Group name="A" desc="计划员GPC_SCHEDULE">
+			<Priority desc="其它权限">
+				<Playback	/>
+			</Priority>
+			<LayoutControlPriority desc="定义控件权限">
+				<GPC-General />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="B" desc="调度员GPC_DISPATCHER">
+			<RoutePriority desc="进路列表权限">
+				<ROUTE_WR />
+			</RoutePriority>
+			<LayoutControlPriority>
+				<GPC-General />
+				<EditTrainid />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="C" desc="操作员GPC_OPERATOR">
+			<Priority>
+				<SetKmmarkVisible />
+			</Priority>
+			<RoutePriority desc="进路列表权限">
+				<ROUTE_WR />
+			</RoutePriority>
+			<LayoutControlPriority>
+				<CTC />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="D" desc="调度长GPC_DISPATCHERS">
+			<Priority>
+				<Playback	/>
+			</Priority>
+			<LayoutControlPriority>
+				<GPC-General />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="E" desc="背投GPC_SCREEN_LAYOUT">
+			<LayoutControlPriority>
+				<GPC-General />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="F" desc="培训台GPC_TRAIN">
+			<Priority>
+				<Playback	/>
+			</Priority>
+			<LayoutControlPriority>
+				<GPC-General />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="G" desc="GPC_SERVICE">
+			<Priority>
+				<Playback	/>
+			</Priority>
+			<LayoutControlPriority>
+				<GPC-General />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="H" desc="电务维修GPC_MAINTAIN">
+			<Priority>
+				<Playback	/>
+			</Priority>
+			<LayoutControlPriority>
+				<GPC-General />
+				<CircuitBadness     />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="I" desc="绘图台GPC_PLOT">
+			<LayoutControlPriority>
+				<GPC-General />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="J" desc="机调员台GPC_MACHINE">
+			<Priority>
+				<Playback	/>
+			</Priority>
+			<LayoutControlPriority>
+				<GPC-General />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="K" desc="货调员台GPC_GOODS">
+			<LayoutControlPriority>
+				<CTC />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="L" desc="统计台GPC_SCREEN_TG">
+			<LayoutControlPriority>
+				<GPC-General />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="M" desc="GPC_AFFAIR_SERVER">
+			<Priority>
+				<Playback	/>
+			</Priority>
+			<LayoutControlPriority>
+				<CTC />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="N" desc="值班主任GPC_SUPER_DISPATCH">
+			<Priority>
+				<Playback	/>
+			</Priority>
+			<LayoutControlPriority>
+				<CTC />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="O" desc="调试员GPC_OTHER_DISPATCH">
+			<Priority>
+				<Playback	/>
+			</Priority>
+			<LayoutControlPriority>
+				<GPC-General />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="P" desc="系统维护GPC_SUPER_MAINTAIN">
+			<Priority>
+				<Playback	/>
+			</Priority>
+			<LayoutControlPriority>
+				<GPC-General />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="Q" desc="调试员GPC_TEST">
+			<Priority>
+				<Playback	/>
+			</Priority>
+			<RoutePriority desc="进路列表权限">
+				<ROUTE_WR />
+			</RoutePriority>
+			<LayoutControlPriority>
+				<CTC />
+			</LayoutControlPriority>
+		</Group>
+		<Group name="R" desc="综合维修调度员GPC_MAP">
+			<RoutePriority desc="进路列表权限">
+				<ROUTE_READONLY />
+			</RoutePriority>
+			<LayoutControlPriority>
+				<GPC-General />
+				<Block />
+			</LayoutControlPriority>
+		</Group>
+		
+		
+		<Priority desc="LayoutTerm客户端权限定义表">
+			<Playback		mask0="0x00000001" desc="回放" />
+			<CircuitBadnessShow	mask0="0x00000010" desc="分路不良显示与隐藏 可操作" />
+		</Priority>
+		<RoutePriority desc="LayoutTerm进路序列权限定义表">
+			 <ROUTE_READONLY>
+			 	 <LROUTE_READ />
+			 	 <SROUTE_READ/>
+			 </ROUTE_READONLY>
+			 <ROUTE_WR>
+			 	 <LROUTE_READ />
+			 	 <LROUTE_WRITE />
+			 	 <SROUTE_READ />
+			 	 <SROUTE_WRITE />
+			 </ROUTE_WR>
+			 <LROUTE_READ		mask0="0x00000001" desc="列车进路可读" />
+			 <LROUTE_WRITE		mask0="0x0000000e" desc="列车进路可写" />
+			 <SROUTE_READ		mask0="0x00000010" desc="调车进路可读" />
+			 <SROUTE_WRITE		mask0="0x000000e0" desc="调车进路可写" />
+		</RoutePriority>	 
+	    <LayoutControlPriority desc="Layout Control 权限定义">
+	        <GPC-General desc="一般gpc功能">
+	            <GPCPri             />
+	            <Monitor            />
+	        </GPC-General>
+	
+	        <CTC>
+	            <CTC-C3           />
+	        </CTC>
+	        
+	        <CTC-General desc="用于一般CTC功能定义">
+	            <GPC-General         />
+	            <EditTrainid        />
+	
+	            <Route              />
+	            <SigReopen          />
+	            <Pilot              />
+	            <PilotLock          />
+	            <ManualUnlock       />
+	            <Switch             />
+	            <Block              />
+	            <Function           />
+	            <SlopeUnlock        />
+	            
+	            <ModeConversion     />
+	            <StatusSelection    />
+	            
+	            <!--TestRoute          />
+	            <AutoPass           />
+	            <RouteShackle       /-->
+	            
+	            <CircuitBadness     />
+	            <NoElectric         />
+	            <LocomotiveOccupy   />
+	            <SideFaultSet       />
+	        </CTC-General>
+	        <CTC-C3 desc="用于C3客专">
+	            <CTC-General		/>
+	            <CtcSignalOpenClose />
+	        </CTC-C3>
+	        <CTC-HNCJ desc="用于沪宁城际">
+	            <CTC-General		/>
+	            <CtcSignalOpenClose />
+	            <JianGuiErr         />
+	            <XinGuiErr          />
+	        </CTC-HNCJ>
+	        <CTC-CDB desc="赤大白特殊，比一般CTC少几个功能">
+	            <GPC-General         />
+	            <EditTrainid        />
+	            
+	            <Route              />
+	            <SigReopen          />
+	            <Pilot              />
+	            <PilotLock          />
+	            <ManualUnlock       />
+	            <Switch             />
+	            <Block              />
+	            <Function           />
+	            <SlopeUnlock        />
+	            
+	            <ModeConversion     />
+	            <StatusSelection    />
+	            
+	            <!--TestRoute          />
+	            <AutoPass           />
+	            <RouteShackle       /-->
+	            
+	            <CircuitBadness     />
+	            <LocomotiveOccupy   />
+	        </CTC-CDB>
+	
+	        <MMI desc="联锁MMI">
+	            <Route              />
+	            <SigReopen          />
+	            <Pilot              />
+	            <PilotLock          />
+	            <ManualUnlock       />
+	            <Switch             />
+	            <Block              />
+	            <Function           />
+	            <SignalOpenClose    />
+	            <SlopeUnlock        />
+	            <Humping            />
+	            <CtrlZoneRequesting />
+	            <NoElectric         />
+	            <Monitor            />
+	            <EditTrainid        />
+	        </MMI>
+	        <MMITest>
+	            <MMI />
+	            <StationUnlock			/>
+	            <SwitchJam />
+	            <FilamentBreak />
+	            <OccupationClear />
+	        </MMITest>
+	
+	        <Route              mask0="0x00000001" desc="进路操作"/>
+	        <TestRoute          mask0="0x00000002" desc="试排"/>
+	        <SigReopen          mask0="0x00000004" desc="信号重开"/>
+	        <Pilot              mask0="0x00000008" desc="引导"/>
+	        <PilotLock          mask0="0x00000010" desc="引导总锁"/>
+	        <ManualUnlock       mask0="0x00000020" desc="总人解"/>
+	        <Switch             mask0="0x00000040" desc="道岔定操/反操/单锁/解锁"/>
+	        <Block              mask0="0x00000080" desc="封锁/解封"/>
+	        <Function           mask0="0x00000100" desc="功能按钮"/>
+	        <SignalOpenClose    mask0="0x00000200" desc="开关信号"/>
+	        <SlopeUnlock        mask0="0x00000400" desc="坡道解锁"/>
+	        <ModeConversion     mask0="0x00000800" desc="模式转换"/>
+	        <StatusSelection    mask0="0x00001000" desc="状态选择"/>
+	        <StationUnlock      mask0="0x00002000" desc="全站解锁"/>
+	        <SwitchJam          mask0="0x00004000" desc="挤岔"/>
+	        <FilamentBreak      mask0="0x00008000" desc="灯丝断丝"/>
+	        <OccupationClear    mask0="0x00010000" desc="占用出清"/>
+	        <Humping            mask0="0x00020000" desc="溜放"/>
+	        <CtrlZoneRequesting mask0="0x00040000" desc="控制区域"/>
+	        <SideUnlock         mask0="0x00080000" desc="区故解"/>
+	        <Sim                mask0="0x00100000" desc="模拟操作"/>
+	        <CircuitBadness     mask0="0x00200000" desc="分路不良"/>
+	        <AutoPass           mask0="0x00400000" desc="自通"/>
+	        <RouteShackle       mask0="0x00800000" desc="进路单锁"/>
+	        <GPCPri             mask0="0x01000000" desc="中心-专对模式转换用"/>
+	        <OnlyCtcRoute       mask0="0x02000000" desc="进路模拟显示，专对调车作业单"/>
+	        <NoElectric         mask0="0x04000000" desc="无电设置"/>
+	        <LocomotiveOccupy   mask0="0x08000000" desc="机占"/>
+	        <Monitor            mask0="0x10000000" desc="监测"/>
+	        <EditTrainid        mask0="0x20000000" desc="车次号编辑"/>
+	        <Privilege          mask0="0x40000000" desc="已不用"/>
+	        <SideFaultSet       mask0="0x80000000" desc="区段故障"/>
+
+	        <OuterCommand       mask1="0x00000001" desc="外部命令" />
+	        <CtcSignalOpenClose mask1="0x00000010" desc="点灯灭灯"/>
+	        <JizhouFuwei        mask1="0x00000020" desc="计轴复位" />
+	        <SwitchAuthorize    mask1="0x00000040" desc="道岔授去权" />
+	        <HatPutOn           mask1="0x00000080" desc="扣帽" />
+	        <AutoPass           mask1="0x00000100" desc="ATS自通" />
+	        <CILightOpenClose   mask1="0x00000200" desc="联锁的点灯关灯" />
+	        <JianGuiErr         mask1="0x00000400" desc="尖轨故障" />
+	        <XinGuiErr          mask1="0x00000800" desc="心轨故障" />
+	    </LayoutControlPriority>
+	</LayoutUserGroup>
+</root>

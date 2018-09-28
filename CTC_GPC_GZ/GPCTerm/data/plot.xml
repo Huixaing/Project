@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<plot>
+	<plot12>
+		<!--  
+		<stytle>2</stytle>
+    	<margin left="1" right="1" top="1" bottom="1"/>
+   
+   		<name_area  x_offset="4"   y_offset="4"  height="2"    width="20"/>
+   		<phase_area x_offset="4"   y_offset="6"  height="10"   width="70"/>
+		<train_area x_offset="4"   y_offset="18" height="70"   width="70"  timedlt="4"/>
+	
+		<note_area  x_offset="76"  y_offset="6"  height="12"   width="25"/>
+		<car_area   x_offset="89"  y_offset="20" height="76"   width="12"/>
+		<qb_area    x_offset="76"  y_offset="20" height="76"   width="12"/>
+		-->
+		
+		<stytle>1</stytle>
+		<margin left="1" right="1" top="1" bottom="1" />
+		<name_area  x_offset="4"  y_offset="4"  height="2"  width="20" />
+		<train_area x_offset="4"  y_offset="10" height="68" width="70" timedlt="4" />
+		<phase_area x_offset="4"  y_offset="6"  height="2"  width="70" />
+		<qb_area    x_offset="4"  y_offset="87" height="10" width="94" />
+		<note_area  x_offset="78" y_offset="6"  height="10" width="20" />
+		<car_area   x_offset="78" y_offset="20" height="66" width="20" />
+		
+	</plot12>
+	<plot24>
+		<stytle>2</stytle>
+		<margin left="1" right="1" top="1" bottom="1" />
+		<name_area  x_offset="1"     y_offset="6"  height="3"  width="10" />
+		<train_area x_offset="13"  y_offset="18" height="72" width="66" timedlt="4" />
+		<phase_area x_offset="11.3"  y_offset="6"  height="10" width="70" />
+		
+		<note_area  x_offset="82" y_offset="6"  height="12" width="17" />
+		
+		<qb_area_left   x_offset="1"    y_offset="20" height="78" width="9" />
+		<qb_area_right  x_offset="81.5"   y_offset="20" height="78" width="8.5" />
+		<car_area       x_offset="90.5" y_offset="20" height="78" width="8.5" />
+	</plot24>
+	<basic>
+		<stytle>5</stytle>
+		<train_area x_offset="4"  y_offset="8" height="80" width="92" timedlt="5" />
+	</basic>
+</plot>

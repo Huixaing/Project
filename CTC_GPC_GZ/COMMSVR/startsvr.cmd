@@ -1,0 +1,1 @@
+start commsvr comm.cfg

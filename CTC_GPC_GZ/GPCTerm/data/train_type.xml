@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="GB2312"?>
+<TRAIN_TYPE_DEF>
+	<ABS_TIME_TYPES>
+		<ABS_TIME_TYPE id ="0" name="特别旅客快车运行时分"/>
+		<ABS_TIME_TYPE id ="1" name="快速旅客列车运行时分"/>
+		<ABS_TIME_TYPE id ="2" name="普通旅客列车运行时分"/>
+		<ABS_TIME_TYPE id ="3" name="货物列车运行时分"/>
+		<ABS_TIME_TYPE id ="4" name="行包列车运行时分"/>
+		<ABS_TIME_TYPE id ="5" name="动车组运行时分"/>
+		<ABS_TIME_TYPE id ="6" name="特快货物列车运行时分"/>
+		<ABS_TIME_TYPE id ="7" name="快速货物列车运行时分"/>
+
+		<ABS_TIME_TYPE id ="16" name="重载（百辆）货物列车运行时分"/>
+		<ABS_TIME_TYPE id ="17" name="空车限速货物列车运行时分"/>
+		<ABS_TIME_TYPE id ="18" name="未定义货车运行时分1"/>
+		<ABS_TIME_TYPE id ="19" name="未定义货车运行时分2"/>
+		<ABS_TIME_TYPE id ="20" name="未定义货车运行时分3"/>
+		<ABS_TIME_TYPE id ="21" name="未定义货车运行时分4"/>
+	</ABS_TIME_TYPES>
+	<RUN_TYPES>
+		<RUN_TYPE id ="0" name="特别旅客快车"/>
+		<RUN_TYPE id ="1" name="快速旅客列车"/>
+		<RUN_TYPE id ="2" name="普通旅客列车"/>
+		<RUN_TYPE id ="3" name="货物列车"/>
+		<RUN_TYPE id ="4" name="行包列车"/>
+		<RUN_TYPE id ="5" name="动车组"/>
+		<RUN_TYPE id ="6" name="特快货物列车"/>
+		<RUN_TYPE id ="7" name="快速货物列车"/>
+	</RUN_TYPES>
+	<PRIORITIES>
+		<PRIORITY id="0" name="缺省0"/>
+		<PRIORITY id="1" name="缺省1"/>
+		<PRIORITY id="2" name="缺省2"/>
+		<PRIORITY id="3" name="缺省3"/>
+		<PRIORITY id="4" name="缺省4"/>
+		<PRIORITY id="5" name="缺省5"/>
+	</PRIORITIES>
+	<TRAIN_TYPES default_train_type="255" >
+		<TRAIN_TYPE id="0" name="跨局特快旅客列车" run_type="0" priority="1">
+			<TRAIN_ID_RANGE prefix="T" start="1" end="4998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="1" name="管内特快旅客列车" run_type="0" priority="1">
+			<TRAIN_ID_RANGE prefix="T" start="5001" end="9998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="2" name="跨局快速旅客列车" run_type="1" priority="1">
+			<TRAIN_ID_RANGE prefix="K" start="1" end="6998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="3" name="管内快速旅客列车" run_type="1" priority="1">
+			<TRAIN_ID_RANGE prefix="K" start="7001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="N" start="1" end="9998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="4" name="跨三局及其以上普通旅客快车" run_type="1" priority="2">
+			<TRAIN_ID_RANGE prefix="" start="1001" end="1998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="5" name="跨两局普通旅客快车" run_type="1" priority="2">
+			<TRAIN_ID_RANGE prefix="" start="2001" end="3998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="6" name="管内普通旅客快车" run_type="1" priority="2">
+			<TRAIN_ID_RANGE prefix="" start="4001" end="5998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="7" name="跨局普通旅客慢车" run_type="2" priority="1">
+			<TRAIN_ID_RANGE prefix="" start="6001" end="6198"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="8" name="管内普通旅客慢车" run_type="2" priority="2">
+			<TRAIN_ID_RANGE prefix="" start="6201" end="7598"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="9" name="跨局临时旅客列车" run_type="2" priority="2">
+			<TRAIN_ID_RANGE prefix="L" start="1" end="6998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="10" name="管内临时旅客列车" run_type="2" priority="2">
+			<TRAIN_ID_RANGE prefix="L" start="7001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="A" start="1" end="9998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="11" name="跨局临时旅游列车" run_type="2" priority="2">
+			<TRAIN_ID_RANGE prefix="Y" start="1" end="498"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="12" name="管内临时旅游列车" run_type="2" priority="2">
+			<TRAIN_ID_RANGE prefix="Y" start="501" end="998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="13" name="回送出入厂客车底列车" run_type="2" priority="2">
+			<TRAIN_ID_RANGE prefix="00" start="1" end="298"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="14" name="因故折返旅客列车" run_type="2" priority="2">
+			<TRAIN_ID_RANGE prefix="FG"  start="   1" end="5998"/>
+			<TRAIN_ID_RANGE prefix="FG"  start="6001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="FC"  start="   1" end="1998"/>
+			<TRAIN_ID_RANGE prefix="FC"  start="2001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="FD"  start="   1" end="3998"/>
+			<TRAIN_ID_RANGE prefix="FD"  start="4001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="FDJ" start="1" end="99999"/>
+			<TRAIN_ID_RANGE prefix="FZ"  start="   1" end="9998"/>
+			<TRAIN_ID_RANGE prefix="FT"  start="   1" end="4998"/>
+			<TRAIN_ID_RANGE prefix="FT"  start="5001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="FK"  start="   1" end="6998"/>
+			<TRAIN_ID_RANGE prefix="FK"  start="7001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="FN"  start="   1" end=" 998"/>
+			<TRAIN_ID_RANGE prefix="FY"  start="   1" end=" 498"/>
+			<TRAIN_ID_RANGE prefix="FY"  start=" 501" end=" 998"/>
+			<TRAIN_ID_RANGE prefix="FL"  start="   1" end="6998"/>
+			<TRAIN_ID_RANGE prefix="FL"  start="7001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="FA"  start="   1" end=" 998"/>
+			<TRAIN_ID_RANGE prefix="F "  start="1001" end="8998"/>	
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="15" name="直达特快旅客列车" run_type="0" priority="1">
+			<TRAIN_ID_RANGE prefix="Z" start="1" end="9998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="16" name="高级专列及先驱列车" run_type="1" priority="1">
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="17" name="跨局动车组" run_type="5" priority="0" loco_type="1">
+			<TRAIN_ID_RANGE prefix="D" start="1" end="3998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="18" name="管内动车组" run_type="5" priority="0"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="D" start="4001" end="9998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="19" name="动车组检测列车" run_type="5" priority="0"  loco_type="1">		
+			<TRAIN_ID_RANGE prefix="DJ" start="1" end="99999"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="20" name="通勤列车" run_type="2" priority="2">
+			<TRAIN_ID_RANGE prefix="" start="7601" end="8998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="21" name="回送图定客车底" run_type="2" priority="2" loco_type="1">
+			<TRAIN_ID_RANGE prefix="0 " start="   1" end="9998"/>
+			<TRAIN_ID_RANGE prefix="0G" start="   1" end="5998"/>
+			<TRAIN_ID_RANGE prefix="0G" start="6001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="0C" start="   1" end="1998"/>
+			<TRAIN_ID_RANGE prefix="0C" start="2001" end="99998"/>
+			<TRAIN_ID_RANGE prefix="0D" start="   1" end="3998"/>
+			<TRAIN_ID_RANGE prefix="0D" start="4001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="0DJ" start="1" end="99999"/>
+			<TRAIN_ID_RANGE prefix="0Z" start="   1" end="9998"/>
+			<TRAIN_ID_RANGE prefix="0T" start="   1" end="4998"/>
+			<TRAIN_ID_RANGE prefix="0T" start="5001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="0K" start="   1" end="6998"/>
+			<TRAIN_ID_RANGE prefix="0K" start="7001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="0N" start="   1" end=" 998"/>
+			<TRAIN_ID_RANGE prefix="0Y" start="   1" end=" 498"/>
+			<TRAIN_ID_RANGE prefix="0Y" start=" 501" end=" 998"/>
+			<TRAIN_ID_RANGE prefix="0L" start="   1" end="6998"/>
+			<TRAIN_ID_RANGE prefix="0L" start="7001" end="9998"/>
+			<TRAIN_ID_RANGE prefix="0A" start="   1" end=" 998"/>
+			<TRAIN_ID_RANGE prefix="0X" start="   1" end=" 998"/>		
+		</TRAIN_TYPE>		
+		<TRAIN_TYPE id="22" name="跨局高速动车组" run_type="5" priority="0"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="G" start="1" end="55998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="23" name="管内高速动车组" run_type="5" priority="0"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="G" start="6001" end="9998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="24" name="跨局城际动车组" run_type="5" priority="0"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="C" start="1" end="1998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="25" name="管内城际动车组" run_type="5" priority="0"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="C" start="2001" end="99998"/>
+		</TRAIN_TYPE>
+		
+	        <TRAIN_TYPE id="26" name="试运转列车" run_type="5" priority="0"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="" start="55001" end="55998"/>
+		</TRAIN_TYPE>
+		
+		<TRAIN_TYPE id="136" name="快速货物列车(点到点)" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="" start="79001" end="79998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="137" name="远程技术直达列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="X" start="88001" end="88998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="138" name="快运货物列车" run_type="4" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="X" start="201" end="2998"/>
+			<TRAIN_ID_RANGE prefix="X" start="8001" end="9998"/>
+				</TRAIN_TYPE>
+		<TRAIN_TYPE id="139" name="特快货物班列" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="X" start="1" end="199"/> 
+			</TRAIN_TYPE>
+		<TRAIN_TYPE id="140" name="160KM/H特需货物列车" run_type="6" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="X" start="3001" end="3098"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="141" name="120KM/H特需货物列车" run_type="7" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="X" start="3101" end="3398"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="142" name="80KM/H特需货物列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="X" start="3401" end="3998"/>
+		</TRAIN_TYPE>
+		
+		<TRAIN_TYPE id="144" name="集装箱五定班列" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="80001" end="80998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="145" name="普通货物五定班列" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="81001" end="81748"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="146" name="快运货物列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="81751" end="81998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="147" name="煤炭直达列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="82001" end="84998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="148" name="石油直达列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="85001" end="85998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="149" name="始发直达列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="86001" end="86998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="150" name="空车直达列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="87001" end="87998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="151" name="技术直达列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="10001" end="19998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="152" name="直通货物列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="20001" end="29998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="153" name="区段货物列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="30001" end="39998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="154" name="摘挂列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix="" start="40001" end="44998"/>
+			<TRAIN_ID_RANGE prefix="电" start="40001" end="44998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="155" name="小运转列车" run_type="3" priority="5">
+			<TRAIN_ID_RANGE prefix="    " start="45001" end="49998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="156" name="超限货物列车" run_type="3" priority="4" loco_type="4">
+			<TRAIN_ID_RANGE prefix=" " start="70001" end="70998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="157" name="重载货物列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix=" " start="71001" end="72998"/>
+			<TRAIN_ID_RANGE prefix=" " start="79901" end="79998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="158" name="保温列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="73001" end="74998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="159" name="军用列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="90001" end="91998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="160" name="自备车列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix=" " start="60001" end="69998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="161" name="客车单机" run_type="3" priority="5">
+			<TRAIN_ID_RANGE prefix="   " start="50001 " end=" 50998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="162" name="货车单机" run_type="3" priority="5">
+			<TRAIN_ID_RANGE prefix="  " start="51001 " end="51998 "/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="163" name="小运转单机" run_type="3" priority="5">
+			<TRAIN_ID_RANGE prefix="" start="52001" end="52998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="164" name="补机" run_type="3" priority="5">
+			<TRAIN_ID_RANGE prefix="" start="53001" end="54998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="166" name="轻油动车、轨道车" run_type="3" priority="5">
+			<TRAIN_ID_RANGE prefix="" start="56001" end="56998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="167" name="路用列车" run_type="3" priority="2">
+			<TRAIN_ID_RANGE prefix=" " start="57001" end="57998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="168" name="救援列车" run_type="3" priority="5">
+			<TRAIN_ID_RANGE prefix="" start="58101" end="58998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="169" name="回送军用列车" run_type="3" priority="5">
+			<TRAIN_ID_RANGE prefix="" start="90001" end="91998"/>
+			<TRAIN_ID_RANGE prefix="" start="890001" end="890999"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="170" name="电力技术直达列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="10001" end="19998"/>
+			<TRAIN_ID_RANGE prefix="电" start="00001" end="99999"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="171" name="抢险救灾列车" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix="" start="95001" end="97998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="172" name="普通货物五定班列" run_type="3" priority="4">
+			<TRAIN_ID_RANGE prefix="" start="89001" end="89999"/>		
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="173" name="电力直通货物列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH"  start="20001" end="29998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="174" name="电力区段货物列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH"   start="30001" end="39998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="175" name="电力摘挂列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="40001" end="44998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="176" name="电力小运转列车" run_type="3" priority="5" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="45001" end="49998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="177" name="电力客车单机" run_type="3" priority="5" loco_type="1">
+			<TRAIN_ID_RANGE prefix=" DH" start="50001 " end=" 50998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="178" name="电力货车单机" run_type="3" priority="5"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="51001 " end="51998 "/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="179" name="电力小运转单机" run_type="3" priority="5"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="52001" end="52998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="180" name="电力补机" run_type="3" priority="5"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="53001" end="54998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="181" name="电力试运转列车" run_type="3" priority="5"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="55001" end="55998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="182" name="电力轻油动车、轨道车" run_type="3" priority="5"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="56001" end="56998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="183" name="电力路用列车" run_type="3" priority="2"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="57001" end="57998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="184" name="电力救援列车" run_type="3" priority="5"  loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="58101" end="58998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="185" name="电力自备车列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="60001" end="69998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="186" name="电力重载货物列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="71001" end="72998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="187" name="电力保温列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="73001" end="74998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="188" name="电力集装箱五定班列" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="80001" end="80998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="189" name="电力普通货物五定班列" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="81001" end="81748"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="190" name="电力快运货物列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="81751" end="81998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="191" name="电力煤炭直达列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="82001" end="84998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="192" name="电力石油直达列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="85001" end="85998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="193" name="电力始发直达列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="86001" end="86998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="194" name="电力空车直达列车" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="87001" end="87998"/>
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="195" name="电力普通货物五定班列" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="DH" start="89001" end="89999"/>		
+		</TRAIN_TYPE>
+                <TRAIN_TYPE id="196" name="双层集装箱班列" run_type="3" priority="4" loco_type="1">
+			<TRAIN_ID_RANGE prefix="" start="88001" end="88999"/>		
+		</TRAIN_TYPE>
+		<TRAIN_TYPE id="255" name="未知列车" run_type="3" priority="4">
+		</TRAIN_TYPE>
+		
+	</TRAIN_TYPES>
+</TRAIN_TYPE_DEF>

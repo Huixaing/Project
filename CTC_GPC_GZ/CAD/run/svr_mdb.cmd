@@ -1,0 +1,1 @@
+start "µÁ¡¶±€"   svr_mdb.exe ../config/config.mdb

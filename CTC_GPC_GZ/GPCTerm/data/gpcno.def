@@ -1,0 +1,54 @@
+
+;用户配置文件  gpcno.def
+;默认用户名
+[DEFAULT]=gpc21
+
+;屏幕数目
+[SCREENNUM]=1
+
+;是否提示保存图片，缺省不提示
+[PICTURESTIP]=1
+
+
+;打印多少小时的选项，0为24小时，1为12小时，不配置为24小时
+[PRINTFORMAT]=1
+
+;车站跳跃连线设置 1为无标志，2为接入交出，3位连线，不配置为3
+[LEAPLINEFLAG]=2
+
+;运行线线宽像素数，一般为1或2，不配置为2
+[LINEWIDTH]=1
+
+
+;调度命令的存放目录:1-存放在本地硬盘上, 0-存放在网络硬盘上; 网络驱动器的名称
+;2-存放在服务器上，此时后面的驱动器无效
+[DISPATCHERCOMMANDSAVE] = 2,Z
+
+;是否有权限修改基本图
+[BASICSCHEDULEPRIORITY] = 1
+
+;启用综合运维监控
+[LAYOUT_SET_MSS_PORT]=1
+
+;进路序列的车站变化是否随站场画面的车站选择变化: 1-区段画面下的车站选择,2-单站画面下的车站选择
+[ROUTELISTVIEW]= 0,0,0,0
+
+;技术停点的绘制：1 ：绘制‘▽’ 0:不绘制
+[TENICAL_STOP_DRAWWAY]= -1
+
+[LAYOUTPOS] = 0, 0, 3200, 1200
+;列控命令 权限
+; 格式 编辑权限(0:无 1:有), 执行权限(0:无 1:有)
+[TCC_DCMD_RIGHT]=1,1
+
+[LIMIT_MODIFY_ACTUAL_TIME]=10,1
+
+[WIDE_PIXEL]=1
+
+;助调施工计划查询施工计划
+;[ENABLE_MMPLAN_SVR]=1
+ 
+;是否显示总公司统一界面 1：是 0:否
+[FORMAT_VIEW]=1
+
+[TG_CTRL]=1,1,1,1,1,1,1,1

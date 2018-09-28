@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="GB2312"?>
+<GPC_TG_DEFINE>
+	<!-- <TG_RIGHT>是个功能对照表, <APP_CTRL> <MARK_CTRL> <TRAIN_CTRL>中项目内容不可修改 -->
+	<TABLE>
+ 		<APP_EX_CTRL desp="">
+ 			<CTRL	id="15" set="0x00004000" desp="广州局, 查找、选中运行线显示更清晰"/>
+			<CTRL	id="20" set="0x00080000" desp="广州局, 直接设置列车自触并下到车站"/>
+			<CTRL	id="21" set="0x00100000" desp="广州局, 设置显示、隐藏列车进路状态"/>	
+			<CTRL   id="22" set="0x00200000" desp="显示基本图运行线闪烁"/>
+			<CTRL	id="23" set="0x00400000" desp="广州局, 营业时间和技术停点联动"/>
+			
+			<CTRL id="24" set="0x00800000" desp="折返车次显示后续车次"/>
+			<CTRL id="25" set="0x01000000" desp="修改列车股道弹出调度命令窗口"/>
+			<CTRL id="26" set="0x02000000" desp="修改列车股道弹出的调度命令窗口直接生成调度命令"/>
+			<CTRL id="27" set="0x04000000" desp="济南局, 绘制跨区段的区间作业列车"/>
+			<CTRL id="28" set="0x08000000" desp="计划线参数窗口检查出入口联通性报警提示"/>
+			<CTRL id="29" set="0x10000000" desp="车站页面扩大显示范围，防止站名过长"/>
+			<CTRL id="30" set="0x20000000" desp="不显示乘务悬浮窗"/>
+			<CTRL id="31" set="0x40000000" desp="每小时显示股道名字"/>
+		</APP_EX_CTRL>
+		<APP_CTRL>
+			<CTRL id="1" set="0x00000001" desp="绘制通过股道点"/>
+			<CTRL id="2" set="0x00000002" desp="修改技术停点需要密码, 上海局要密码,其它局不要密码"/> 
+			<CTRL id="3" set="0x00000000" desp="画线结束弹出交出选择对话框, 上海局不需要弹出选择框,其它局需要"/> 
+			<CTRL id="4" set="0x00000008" desp="分散显示多车次号 上海局否,其它局是"/> 
+			
+			<CTRL id="5" set="0x00000010" desp="集中显示多车次号于接入始发处 所有局均否"/> 
+			<CTRL id="6" set="0x00000020" desp="绘制运行线结束，单击右键生成运行线功能. 和id=3配合使用 所有局需要"/> 
+			<CTRL id="7" set="0x00000040" desp="默认技术停点,济南局默认非技术停点，其它局是默认技术停点"/> 
+			<CTRL id="8" set="0x00000080" desp="动车组股道是否可以修改,济南不能,其它能"/> 
+		
+			<CTRL id="9" set="0x00000100" desp="有营业车站通过变到开是否需要密码,南昌 武汉局需要密码,其它不需要"/> 
+			<CTRL id="10" set="0x00000200" desp="有营业车站到开变通过是否需要密码,上海局需要密码,其它不需要"/> 
+			<CTRL id="11" set="0x00000400" desp="进路已排出车或客车到开变通过是否需要提示框,济南有提示框,其它不需要"/> 
+			<CTRL id="12" set="0x00000800" desp="进路已排出车或客车通过变到开是否需要提示框,济南有提示框,其它不需要"/> 
+		
+			<CTRL id="13" set="0x00001000" desp="西陇海特殊处理,西陇海必须设置它"/> 
+			<CTRL id="14" set="0x00002000" desp="选中运行线双击左键弹出进路设置对话框, 南昌 武汉局外所有都是有"/> 
+			<CTRL id="15" set="0x00004000" desp="是否绘制进路准备好标志, 合宁、南昌 武汉不绘制 济南有"/> 
+			<CTRL id="16" set="0x00008000" desp="反向行车显示车次"/>
+			
+			<CTRL id="17" set="0x00010000" desp="统计早晚点圆圈显示位置 置位后显示在锐角 否则钝角 上海局锐角,其它钝角"/>
+			<CTRL id="20" set="0x00080000" desp="广州局, 直接设置列车自触并下到车站"/>
+			<CTRL id="21" set="0x00100000" desp="广州局, 设置显示、隐藏列车进路状态"/>	
+	
+			
+		</APP_CTRL>
+
+		<MARK_CTRL>
+			<CTRL   id="1" set="0x00000001" desp="是否可以复制标记"/>
+			<CTRL   id="2" set="0x00000002" desp="是否可以删除标记"/>
+			<CTRL   id="3" set="0x00000004" desp="是否可以自动生成调度命令"/>
+		</MARK_CTRL>
+	    
+		<TRAIN_CTRL>
+			<CTRL	id="1" set="0x00000001" desp="复制列车"/>
+			<CTRL	id="2" set="0x00000002" desp="修改车次"/> 
+			<CTRL	id="3" set="0x00000004" desp="调整列车"/> 
+			<CTRL	id="4" set="0x00000008" desp="设置邻台拒绝标志"/> 
+			
+			<CTRL	id="5" set="0x00000010" desp="修改列车接入交出标志继续画线等"/> 
+			<CTRL	id="6" set="0x00000020" desp="添加运输信息"/> 
+			<CTRL   id="7" set="0x00000040" desp="统计早晚点"/> 
+			<CTRL	id="8" set="0x00000080" desp="区间机外停车"/> 
+		
+			<CTRL	id="9" set="0x00000100" desp="修改进路"/> 
+			<CTRL	id="10" set="0x00000200" desp="修改股道"/> 
+			<CTRL	id="11" set="0x00000400" desp="修改接发车股道"/> 
+			<CTRL	id="12" set="0x00000800" desp="列车戴帽"/> 
+		
+			<CTRL	id="13" set="0x00001000" desp="挂节车"/> 
+			<CTRL	id="14" set="0x00002000" desp="修改发车时机"/> 
+			<CTRL	id="15" set="0x00004000" desp="删除列车"/> 
+			<CTRL	id="16" set="0x00008000" desp="通过到开转换"/>
+			<CTRL	id="17" set="0x00010000" desp="技术停点"/>
+			<CTRL   id="18" set="0x00020000" desp="列车禁会"/>
+		</TRAIN_CTRL>
+	</TABLE>
+	
+	<!-- <RIGHT>是各种权限定义, 参照<APP_CTRL> <MARK_CTRL> <TRAIN_CTRL>中项目的权限可修改 -->
+	<RIGHT>
+		<APP desp="该铁路局的特殊需求">
+			<CTRL id="1"/>  
+			<CTRL id="2"/>
+			<CTRL id="3"/>
+			<CTRL id="7"/>
+			<CTRL id="10"/>
+			<CTRL id="11"/>
+			<CTRL id="12"/>
+			
+			<CTRL id="16"/>
+			<CTRL id="17"/>
+			<CTRL id="22"/>
+
+		</APP>
+		<APP_EX>
+			<CTRL id="23"/>
+			<CTRL id="20"/>
+			<CTRL id="21"/>
+			<CTRL id="31"/>
+			
+		</APP_EX>
+		<TRAIN desp="控制选中运行线时右键菜单">
+			<CTRL begin_id="1" end_id="18"/>
+		</TRAIN>
+		
+		<MARK desp="控制选中标记时右键菜单">
+			<CTRL begin_id="1" end_id="3"/>
+		</MARK>
+		
+		<!-- operator权限说明
+			operator="0" desp="运行线和标记是只读的"/>
+			operator="1" desp="运行线可编辑,标记是只读的"/>
+			operator="2" desp="运行线是只读的,标记是可编辑的"/>
+			operator="3" desp="运行线和标记均是可编辑的"/>
+		-->
+		<USERS>
+			<USER id="A" desp="计划员权限" operator="0">
+				<TRAIN>
+					<CTRL begin_id="13" end_id="18"/>
+				</TRAIN>
+				
+				<MARK>
+					<CTRL id="0"/>
+				</MARK>
+			</USER>
+			
+			<USER id="B" desp="调度员权限"	 	operator="3">
+			<!--"Wintg_Term使用, 目前暂时有32位，具有该权限,对应bit位置1 否则bit位清零或者不配置" -->
+			    <WINTG_TERM>
+			    	<bit0 set="1" desp="接收TMIS日班计划"/>
+			    	<bit1 set="1" desp="向车站发送阶段计划"/>
+			    </WINTG_TERM>
+			</USER>
+			
+			<USER id="C" desp="助理调度员权限"	operator="2">
+			    <WINTG_TERM>
+			    	<bit0 set="1" desp="接收TMIS日班计划"/>
+			    	<bit1 set="0" desp="向车站发送阶段计划"/>
+			    </WINTG_TERM>
+			</USER>
+			
+			<USER id="R" desp="施工调度员权限"	operator="2">
+			    <WINTG_TERM>
+			    	<bit0 set="1" desp="接收TMIS日班计划"/>
+			    	<bit1 set="0" desp="向车站发送阶段计划"/>
+			    </WINTG_TERM>
+			</USER>
+			
+			<USER id="Q" desp="调试员权限"		operator="3">
+			    <WINTG_TERM>
+			    	<bit0 set="1" desp="接收TMIS日班计划"/>
+			    	<bit1 set="1" desp="向车站发送阶段计划"/>
+			    </WINTG_TERM>
+			</USER>
+			
+			<USER id="X" desp="待扩充用权限"	operator="1">
+			</USER>
+		</USERS>
+		
+	</RIGHT>
+	
+	<BackgroudBlock set="2" desp="1:底图为一块白色 2: 底图上一班灰色, 本班白色 5: 底图分为五种颜色，颜色逐步变浅"/>
+	<LineWidth      set="1" desp="1: 细线,缺省值 2: 粗线"/>
+	<LeapLineFlag   set="2" desp="跳跃车站绘制方法: 1: 无标记 2: 接入交出,缺省值 3: 连线"/>
+	<TenicalStop    set="0" desp="技术停点绘制方法: 1: 技术停点绘制‘▽’ 0:非技术停点绘制‘▽’  -1：不绘制,缺省值"/>
+	<RouteOkMark    set="3" jcolor="0-255-0" fcolor="0-0-0"  desp="进路准备好标志:   0: 不绘制  1: 紫色线 2: 圆圈 3: J上绿 F下黑"/>
+        <BlockShow      set="0" desp="站内施工符号显示配置 set=0: 车站展开与否始终显示 set=1:只要车站展开时才显示"/>
+	<RouteTrigFlag       set="1" desp="进路自触标志 set=0: 不显示 set=1:显示圆圈 接车兰圈 发车红圈"/>
+	<RouteOkInhibitModifySchd set="1" desp="进路准备好不允许修改计划:   0: 允许  1: 禁止"/>
+	<ShowSideEntryNoPass set="1" color="255-0-0" desp="股道和出入口不通标志显示, set 1:显示 0:不显示 color为股道名显示颜色可以自定义为（R-G-B）"/>
+	<RouteOkInhibitModifySchd  set="1" desp="进路准备好是否允许修改计划点: 0: 允许,缺省值  1: 禁止"/>
+	<CZHConnectLine set="2" color="0-0-255" desp="交路勾连线线宽和颜色配置"/>
+  <TrainRect set="1" rangeX="30" rangeY="20" />
+</GPC_TG_DEFINE>

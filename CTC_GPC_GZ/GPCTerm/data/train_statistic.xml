@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="GB2312"?>
+<TRAIN>
+	<TYPE name="客车">
+		<TYPE name="特别旅客快车">
+			<TYPE name="跨局特别旅客快车" id="0"/>
+			<TYPE name="管内特别旅客快车" id="1"/>
+		</TYPE>
+		<TYPE name="快速旅客快车">
+			<TYPE name="跨局快速旅客快车"  id="2"/>
+			<TYPE name="管内快速旅客快车"  id="3"/>
+		</TYPE>
+		<TYPE name="普通旅客列车">
+			<TYPE name="普通旅客快车">
+				<TYPE name="跨三局及其以上普通旅客快车" id="4"/>
+				<TYPE name="跨两局普通旅客快车" id="5"/>
+				<TYPE name="管内普通旅客快车" id="6"/>
+			</TYPE>
+			<TYPE name="普通旅客慢车">
+				<TYPE name="跨局普通旅客慢车" id="7"/>
+				<TYPE name="管内普通旅客慢车" id="8"/>
+			</TYPE>
+		</TYPE>
+		<TYPE name="临时旅客列车">
+			<TYPE name="跨局临时旅客列车" id="9"/>
+			<TYPE name="管内临时旅客列车" id="10"/>
+		</TYPE>
+		<TYPE name="临时旅游列车">
+			<TYPE name="跨局临时旅游列车" id="11"/>
+			<TYPE name="管内临时旅游列车" id="12"/>
+		</TYPE>
+		<TYPE  name="回送空客车底列车" id="21"/>
+		<TYPE  name="因故折返旅客列车" id="14"/>
+		<TYPE  name="直达特别旅客列车" id="15"/>
+		<TYPE  name="高级专列及先驱列车" id="16"/>
+		<TYPE  name="动车组列车">
+		    <TYPE name="动车组">
+		    	<TYPE name="跨局动车组" id="17"/>
+			<TYPE name="管内动车组" id="18"/>
+		    </TYPE>
+		    <TYPE name="高速动车组">
+		    	<TYPE name="跨局高速动车组" id="22"/>
+			<TYPE name="管内高速动车组" id="23"/>
+		    </TYPE>
+		    <TYPE name="城际动车组">
+		     	<TYPE name="跨局城际动车组" id="24"/>
+			<TYPE name="管内城际动车组" id="25"/>
+		    </TYPE>
+		    <TYPE name="动车组检测列车" id="19"/>
+		</TYPE>
+	</TYPE>
+	<TYPE name="行包专列">
+		<TYPE name="行邮特快专列" id="142"/>
+		<TYPE name="行包快运专列" id="143"/>
+	</TYPE>
+	<TYPE name="货物列车">
+		<TYPE name="五定班列">
+			<TYPE name="集装箱五定班列" id="144"/>
+			<TYPE name="普通货物五定班列" id="145"/>
+		</TYPE>
+		<TYPE name="其它货物列车">
+			<TYPE name="快运货物列车" id="146"/>
+			<TYPE name="煤炭直达列车" id="147"/>
+			<TYPE name="石油直达列车" id="148"/>
+			<TYPE name="始发直达列车" id="149"/>
+			<TYPE name="空车直达列车" id="150"/>
+			<TYPE name="技术直达列车" id="151"/>
+			<TYPE name="直通货物列车" id="152"/>
+			<TYPE name="区段货物列车" id="153"/>
+			<TYPE name="摘挂列车" id="154"/>
+			<TYPE name="小运转列车" id="155"/>
+			<TYPE name="超限货物列车" id="156"/>
+			<TYPE name="重载货物列车" id="157"/>
+			<TYPE name="保温列车" id="158"/>
+			<TYPE name="军用列车" id="159"/>
+			<TYPE name="自备车列车" id="160"/>
+		</TYPE>
+	</TYPE>
+	<TYPE name="单机和路用列车">
+		<TYPE name="单机">
+			<TYPE name="客车单机" id="161"/>
+			<TYPE name="货车单机" id="162"/>
+			<TYPE name="小运转单机" id="163"/>
+		</TYPE>
+		<TYPE name="其它">
+			<TYPE name="补机" id="164"/>
+			<TYPE name="试运转列车" id="165"/>
+			<TYPE name="轻油机车、轨道车" id="166"/>
+			<TYPE name="路用列车" id="167"/>
+			<TYPE name="救援列车" id="168"/>
+		</TYPE>
+	</TYPE>
+	<TYPE name="未知列车类型" id="255"/>
+</TRAIN>

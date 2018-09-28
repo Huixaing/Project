@@ -1,0 +1,1 @@
+start    svr_tg.exe 170 ../config/config.tg
