@@ -10,6 +10,7 @@
 #include "Tooltipwnd.h"
 
 /////////////////////////////////////////////////////////////////////////////
+// Dialog Code
 // CChangePasswordDlg dialog
 
 class CChangePasswordDlg : public CDialog
