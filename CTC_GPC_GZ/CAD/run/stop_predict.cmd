@@ -1,1 +1,0 @@
-taskkill /F /IM svr_predict.exe /T

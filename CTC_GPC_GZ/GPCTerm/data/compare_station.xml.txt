@@ -1,5 +1,0 @@
-<root>
-	<section>
-	   <station id="" name=""/>
-	</section>
-</root>
