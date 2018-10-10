@@ -2,7 +2,7 @@
 #include <vector>
 #include <afxtempl.h>
 using namespace std;
-
+//
 #include ".\ClientSetCfg\tgcontext.h"
 
 #include ".\OcxLoadCfg\EntryCfg.h"
